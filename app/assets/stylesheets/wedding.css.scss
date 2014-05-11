@@ -33,24 +33,32 @@ p {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  height: 600px;
-  background: url("http://www.sanderkeurentjes.nl/portfolio/img/bg-home.jpg") 50% 0 repeat fixed;
+  height: 700px;
+  background: url("home-bg.JPG") 20% 40% repeat fixed;
 }
 
-.about {
+.schedule {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  height: 600px;
+  height: 700px;
   background: url("http://xdesigns.net/wp-content/uploads/2013/07/4-grass-wallpaper.jpg") 50% 0 no-repeat;
 }
 
-.contact {
+.directions {
   position: relative;
   margin: 0 auto;
   width: 100%;
-  height: 600px;
+  height: 700px;
   background: url("http://wallpoper.com/images/00/40/30/48/nature-water_00403048.jpg") 50% 0 repeat fixed;
+}
+
+.rsvp {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 700px;
+  background: url("http://xdesigns.net/wp-content/uploads/2013/07/4-grass-wallpaper.jpg") 50% 0 no-repeat;
 }
 
 .content {
