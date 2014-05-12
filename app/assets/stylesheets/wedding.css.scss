@@ -14,7 +14,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   font-weight: 300;
-	color: #fff;
+	color: #000;
 	margin: 0;
 	padding: 0;
 }
@@ -76,9 +76,19 @@ p {
   position: absolute;
   top: 50px;
   width: 80%;
-  height: 458px;
+  height: 600px;
   padding: 0 10%;
   text-align: center;
+}
+
+.whitebox {
+  position: relative;
+  top: 10px;
+  width: 80%;
+  height: 300px;
+  padding: 0 10%;
+  text-align: center;
+	background-color:rgba(255,255,255,0.5);
 }
 
 .articleTitle {
