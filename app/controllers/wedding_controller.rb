@@ -1,7 +1,18 @@
 class WeddingController < ApplicationController
   def index
-    @guests = Guest.all
-    @guest = Guest.find(1)
-    @response = @guest.response
+    if params[:guest]
+      @guest = Guest.find(params[:guest])
+      if @guest.response.blank?
+        @response = Response.new
+      else
+        @response = @guest.response
+      end
+    else
+      @guest = nil
+    end
+  end
+  
+  def rsvp
+    
   end
 end

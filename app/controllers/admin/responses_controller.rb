@@ -69,7 +69,7 @@ class Admin::ResponsesController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def response_params
-      params.require(:response).permit(:adults, :children, :guest_id, :comments)
+      params.require(:response).permit(:adults, :children, :guest_id, :comments, :friday_reception)
       # params[:response]
     end
 end

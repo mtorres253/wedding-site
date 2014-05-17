@@ -1,7 +1,10 @@
 %section.home{"data-speed" => "2", "data-type" => "background"}
   .content
-    %h2.articleTitle.textShadow 
-      #{@guest.name}, you are
+    %h2.articleTitle.textShadow
+      - if @guest.blank?
+        You are
+      - else
+        #{@guest.name}, you are
       %span.yellow invited
     %h3.articleSubTitle.textShadow To David and Michael's Wedding
     =image_tag "davidandmichael.jpg"
@@ -32,7 +35,7 @@
       %span.yellow RSVP
     %h3.articleSubTitle.textShadow Remember to RSVP
     - unless @guest.blank?
-      = render 'form'
+      = render 'rsvp'
 
       
     
