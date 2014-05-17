@@ -1,7 +1,7 @@
 %section.home{"data-speed" => "2", "data-type" => "background"}
   .content
-    %h2.articleTitle.textShadow
-      You are
+    %h2.articleTitle.textShadow 
+      #{@guest.name}, you are
       %span.yellow invited
     %h3.articleSubTitle.textShadow To David and Michael's Wedding
     =image_tag "davidandmichael.jpg"
@@ -30,7 +30,13 @@
     %h2.articleTitle.textShadow
       Remeber to 
       %span.yellow RSVP
-    %h3.articleSubTitle.textShadow Call or fill out this form
+    %h3.articleSubTitle.textShadow Remember to RSVP
+    - unless @response.blank?
+      = render 'form'
+
+      
+    
+    
 
 
 =content_for :head do
