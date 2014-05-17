@@ -1,0 +1,17 @@
+%h1 Listing guests
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+  %tbody
+    - @guests.each do |guest|
+      %tr
+        %td= guest.name
+        %td= guest.email
+        %td= link_to 'Show', admin_guest_path(guest)
+        %td= link_to 'Edit', edit_admin_guest_path(guest)
+        %td= link_to 'Destroy', admin_guest_path(guest), method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Guest', new_admin_guest_path

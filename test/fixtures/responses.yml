@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  adults: 1
+  children: 1
+  comments: MyString
+
+two:
+  adults: 1
+  children: 1
+  comments: MyString

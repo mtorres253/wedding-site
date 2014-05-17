@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  = @guest.name
+  = @guest.email
+
+= link_to 'Edit', edit_admin_guest_path(@guest)
+|
+\#{link_to 'Back', admin_guests_path}

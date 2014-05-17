@@ -1,0 +1,20 @@
+= form_for [:admin, @response] do |f|
+  - if @response.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@response.errors.count, "error")
+        prohibited this response from being saved:
+      %ul
+        - @response.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :children
+    = f.text_field :children
+  .field
+    = f.label :adults
+    = f.text_field :adults
+  .field
+    = f.label :comments
+    = f.text_field :comments
+  .actions
+    = f.submit
