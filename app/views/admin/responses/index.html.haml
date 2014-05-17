@@ -8,8 +8,12 @@
   %tbody
     - @responses.each do |response|
       %tr
-        %td= link_to 'Show', response
-        %td= link_to 'Edit', edit_response_path(response)
-        %td= link_to 'Destroy', response, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= response.guest_id
+        %td= response.adults
+        %td= response.children
+        %td= response.comments
+        %td= link_to 'Show', admin_response_path(response)
+        %td= link_to 'Edit', edit_admin_response_path(response)
+        %td= link_to 'Destroy', admin_response_path(response), method: :delete, data: { confirm: 'Are you sure?' }
 %br/
-= link_to 'New Response', new_response_path
+= link_to 'New Response', new_admin_response_path
