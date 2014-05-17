@@ -50,7 +50,7 @@ class Admin::ResponsesController < AdminController
       end
     end
   end
-
+  
   # DELETE /responses/1
   # DELETE /responses/1.json
   def destroy
@@ -69,7 +69,7 @@ class Admin::ResponsesController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def response_params
-      params.require(:response).permit(:adults, :children, :guest_id)
+      params.require(:response).permit(:adults, :children, :guest_id, :comments)
       # params[:response]
     end
 end

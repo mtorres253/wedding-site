@@ -9,12 +9,12 @@
           %li= msg
   .field
     = f.label :children
-    = f.select :children, [1, 2]
+    = f.select :children, [1, 2, 3, 4]
   .field
     = f.label :adults
     = f.select :adults, [1, 2]
   .field
     = f.label :comments
-    = f.text_field :comments
+    = f.text_area :comments
   .actions
     = f.submit

@@ -8,7 +8,7 @@
   %tbody
     - @responses.each do |response|
       %tr
-        %td= response.guest_id
+        %td= Guest.find(response.guest_id).name
         %td= response.adults
         %td= response.children
         %td= response.comments

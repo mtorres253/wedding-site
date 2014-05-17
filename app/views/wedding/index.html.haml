@@ -8,8 +8,8 @@
 %section.schedule.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
-      Schedule of
-      %span.yellow events
+      Don't Be Tardy for the
+      %span.yellow Party
     %h3.articleSubTitle.textShadow Friday 9/26/14
 %section.directions.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
@@ -31,7 +31,7 @@
       Remeber to 
       %span.yellow RSVP
     %h3.articleSubTitle.textShadow Remember to RSVP
-    - unless @response.blank?
+    - unless @guest.blank?
       = render 'form'
 
       

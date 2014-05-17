@@ -1,4 +1,4 @@
-= form_for(@response) do |f|
+= form_for [:admin, @response] do |f|
   - if @response.errors.any?
     #error_explanation
       %h2
@@ -7,5 +7,14 @@
       %ul
         - @response.errors.full_messages.each do |msg|
           %li= msg
+  .field
+    = f.label :children
+    = f.select :children, [1, 2]
+  .field
+    = f.label :adults
+    = f.select :adults, [1, 2]
+  .field
+    = f.label :comments
+    = f.text_area :comments
   .actions
     = f.submit
