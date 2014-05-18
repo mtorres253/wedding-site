@@ -1,14 +1,18 @@
 WeddingSite::Application.routes.draw do
   get "wedding/index"
-
+  
+  # resources :responses, :only => [:new, :create, :update]
+  
   namespace :admin do
     # Directs /admin/products/* to Admin::ProductsController
     # (app/controllers/admin/products_controller.rb)
     # get "log_out" => "sessions#destroy", :as => "log_out"
     # get "log_in" => "sessions#new", :as => "log_in"\
-    root :to => 'guests#index'
+    root :to => 'responses#index'
     resources :guests, :responses
   end
+
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

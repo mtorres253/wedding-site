@@ -1,7 +1,7 @@
 class WeddingController < ApplicationController
   def index
-    if params[:guest]
-      @guest = Guest.find(params[:guest])
+    if params[:id]
+      @guest = Guest.find_by_email_encrypted(params[:id])
       if @guest.response.blank?
         @response = Response.new
       else
@@ -10,9 +10,5 @@ class WeddingController < ApplicationController
     else
       @guest = nil
     end
-  end
-  
-  def rsvp
-    
   end
 end

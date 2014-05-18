@@ -1,26 +1,29 @@
-%h1 RSVPs
-%table
-  %thead
-    %tr
-      %th Guest Name
-      %th Adults Attending
-      %th Children Attending
-      %th Friday Reception
-      %th Comments
-      %th Actions
-  %tbody
-    - @responses.each do |response|
+.admin-content
+  %h1 RSVPs
+  %table
+    %thead
       %tr
-        %td= Guest.find(response.guest_id).name
-        %td= response.adults
-        %td= response.children
-        %td= response.friday_reception
-        %td= response.comments
-        %td
-          = link_to 'Show', admin_response_path(response)
-          |
-          = link_to 'Edit', edit_admin_response_path(response)
-          |
-          = link_to 'Destroy', admin_response_path(response), method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Response', new_admin_response_path
+        %th Guest Name
+        %th Adults Attending
+        %th Children Attending
+        %th Friday Reception
+        %th Comments
+        %th Actions
+    %tbody
+      - @responses.each do |response|
+        %tr
+          %td= Guest.find(response.guest_id).name
+          %td= response.adults
+          %td= response.children
+          %td= response.friday_reception
+          %td= response.comments
+          %td
+            = link_to 'Show', admin_response_path(response)
+            |
+            = link_to 'Edit', edit_admin_response_path(response)
+            |
+            = link_to 'Destroy', admin_response_path(response), method: :delete, data: { confirm: 'Are you sure?' }
+  %br/
+  = link_to 'New Response', new_admin_response_path
+  |
+  = link_to 'View Guest List', admin_guests_path

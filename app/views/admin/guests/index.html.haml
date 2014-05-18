@@ -1,17 +1,31 @@
-%h1 Listing guests
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
-  %tbody
-    - @guests.each do |guest|
+.admin-content  
+  %h1 Guests
+  %table
+    %thead
       %tr
-        %td= guest.name
-        %td= guest.email
-        %td= link_to 'Show', admin_guest_path(guest)
-        %td= link_to 'Edit', edit_admin_guest_path(guest)
-        %td= link_to 'Destroy', admin_guest_path(guest), method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Guest', new_admin_guest_path
+        %th ID
+        %th Name
+        %th Email
+        %th Encrypted Email
+        %th Actions
+    %tbody
+      - @guests.each do |guest|
+        %tr
+          %td= guest.id
+          %td= guest.name
+          %td= guest.email
+          %td= guest.email_encrypted
+          %td 
+            = link_to 'Show', admin_guest_path(guest)
+            |
+            = link_to 'Edit', edit_admin_guest_path(guest)
+            |
+            = link_to 'Destroy', admin_guest_path(guest), method: :delete, data: { confirm: 'Are you sure?' }
+  %br/
+  = link_to 'New Guest', new_admin_guest_path
+  |
+  = link_to 'Export Guests'
+  |
+  = link_to 'RSVPs', admin_root_path
+  
+

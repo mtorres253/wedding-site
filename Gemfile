@@ -47,6 +47,10 @@ end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
+# Use att_encrypted to encrypt data
+gem 'attr_encrypted', '~> 1.3.2'
+gem 'encryptor', '~> 1.3.0'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

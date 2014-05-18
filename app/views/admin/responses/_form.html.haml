@@ -16,5 +16,10 @@
   .field
     = f.label :comments
     = f.text_area :comments
+  .field
+    = f.label :comments
+    = f.text_area :comments
+  / .field
+  /   = f.hidden_field :redirect_url, :value => admin_root_path
   .actions
     = f.submit

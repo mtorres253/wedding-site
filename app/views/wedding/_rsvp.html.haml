@@ -19,3 +19,8 @@
   .field
     = f.label :comments
     = f.text_area :comments
+  .field
+    = f.hidden_field :guest_id, :value => @guest.id
+
+    
+%a{class: "nice medium radius blue button", href: "javascript:document.forms[0].submit();"} RSVP

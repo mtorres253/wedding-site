@@ -28,7 +28,7 @@ class Admin::GuestsController < AdminController
 
     respond_to do |format|
       if @guest.save
-        format.html { redirect_to @guest, notice: 'Guest was successfully created.' }
+        format.html { redirect_to [:admin, @guest], notice: 'Guest was successfully created.' }
         format.json { render action: 'show', status: :created, location: @guest }
       else
         format.html { render action: 'new' }
@@ -56,7 +56,7 @@ class Admin::GuestsController < AdminController
   def destroy
     @guest.destroy
     respond_to do |format|
-      format.html { redirect_to guests_url }
+      format.html { redirect_to admin_guests_url }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,7 @@ class Admin::GuestsController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guest_params
-      params[:guest]
+      params.require(:guest).permit(:name, :email, :guest_id)
+      # params[:guest]
     end
 end

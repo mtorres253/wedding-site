@@ -15,6 +15,7 @@ class Admin::ResponsesController < AdminController
   # GET /responses/new
   def new
     @response = Response.new
+    @guests = Guest.all
   end
 
   # GET /responses/1/edit
@@ -28,7 +29,7 @@ class Admin::ResponsesController < AdminController
 
     respond_to do |format|
       if @response.save
-        format.html { redirect_to @response, notice: 'Response was successfully created.' }
+        format.html { redirect_to :back, notice: 'Your RSVP has been sent' }
         format.json { render action: 'show', status: :created, location: @response }
       else
         format.html { render action: 'new' }
@@ -42,7 +43,7 @@ class Admin::ResponsesController < AdminController
   def update
     respond_to do |format|
       if @response.update(response_params)
-        format.html { redirect_to [:admin, @response], notice: 'Response was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Your RSVP was successfully updated' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -56,7 +57,7 @@ class Admin::ResponsesController < AdminController
   def destroy
     @response.destroy
     respond_to do |format|
-      format.html { redirect_to responses_url }
+      format.html { redirect_to admin_responses_url }
       format.json { head :no_content }
     end
   end
