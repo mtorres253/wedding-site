@@ -35,6 +35,7 @@
       %span.yellow RSVP
     %h3.articleSubTitle.textShadow Remember to RSVP
     - unless @guest.blank?
+      #{@email} is your email
       = render 'rsvp'
 
 =content_for :head do

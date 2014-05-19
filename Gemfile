@@ -51,6 +51,13 @@ end
 gem 'attr_encrypted', '~> 1.3.2'
 gem 'encryptor', '~> 1.3.0'
 
+# Use spreadsheet gem to generate spreadsheet
+gem 'spreadsheet', '~> 0.9.7'
+gem 'ruby-ole', '~> 1.2.11.7'
+
+# Use shortener to generate short links
+gem 'shortener'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

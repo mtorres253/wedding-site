@@ -1,7 +1,5 @@
 WeddingSite::Application.routes.draw do
-  get "wedding/index"
   
-  # resources :responses, :only => [:new, :create, :update]
   
   namespace :admin do
     # Directs /admin/products/* to Admin::ProductsController
@@ -12,6 +10,9 @@ WeddingSite::Application.routes.draw do
     resources :guests, :responses
   end
 
+  get "wedding/index"
+  
+  match '/:id' => "shortener/shortened_urls#show", :via => [:get]
   
   
   # The priority is based upon order of creation: first created -> highest priority.

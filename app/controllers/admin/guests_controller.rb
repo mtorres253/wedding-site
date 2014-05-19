@@ -28,6 +28,8 @@ class Admin::GuestsController < AdminController
 
     respond_to do |format|
       if @guest.save
+        @email_encrypted = CGI::escape(@guest.email_encrypted)
+        Shortener::ShortenedUrl.generate("http://www.davidandmichael.com/?eeid=#{@email_encrypted}", @guest)
         format.html { redirect_to [:admin, @guest], notice: 'Guest was successfully created.' }
         format.json { render action: 'show', status: :created, location: @guest }
       else

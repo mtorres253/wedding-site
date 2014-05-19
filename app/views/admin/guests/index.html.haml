@@ -7,6 +7,7 @@
         %th Name
         %th Email
         %th Encrypted Email
+        %th Short URL
         %th Actions
     %tbody
       - @guests.each do |guest|
@@ -14,8 +15,9 @@
           %td= guest.id
           %td= guest.name
           %td= guest.email
-          %td= guest.email_encrypted
-          %td 
+          %td= CGI::escape("#{guest.email_encrypted}")
+          %td= short_url("http://www.davidandmichael.com/?eeid=#{CGI::escape(guest.email_encrypted)}")
+          %td
             = link_to 'Show', admin_guest_path(guest)
             |
             = link_to 'Edit', edit_admin_guest_path(guest)
@@ -23,9 +25,9 @@
             = link_to 'Destroy', admin_guest_path(guest), method: :delete, data: { confirm: 'Are you sure?' }
   %br/
   = link_to 'New Guest', new_admin_guest_path
+  / |
+  / = link_to "Download Guest List", admin_guest_path(:format => :xls)
   |
-  = link_to 'Export Guests'
-  |
-  = link_to 'RSVPs', admin_root_path
+  = link_to 'View RSVPs', admin_root_path
   
 

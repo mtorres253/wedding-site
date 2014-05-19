@@ -4,6 +4,7 @@
     %thead
       %tr
         %th Guest Name
+        %th Coming?
         %th Adults Attending
         %th Children Attending
         %th Friday Reception
@@ -13,6 +14,7 @@
       - @responses.each do |response|
         %tr
           %td= Guest.find(response.guest_id).name
+          %td= response.coming
           %td= response.adults
           %td= response.children
           %td= response.friday_reception

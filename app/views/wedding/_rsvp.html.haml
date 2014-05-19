@@ -8,6 +8,9 @@
         - @response.errors.full_messages.each do |msg|
           %li= msg
   .field
+    = f.label :coming
+    = f.select :coming, [true, false]
+  .field
     = f.label :children
     = f.select :children, [1, 2]
   .field
