@@ -5,5 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Guest.create([{name: 'David', email: 'david.olem@gmail.com'}, {name: 'Michael', email: 'mtorres253@gmail.com'}])
-Response.create([{adults: '2', children: '1', guest_id: '1', comments: 'awesome'}])
+@guest1 = Guest.create({name: 'David', email: 'david.olem@gmail.com'})
+@guest2 = Guest.create({name: 'Michael', email: 'mtorres253@gmail.com'})
+Shortener::ShortenedUrl.generate("http://www.davidandmichael.com/?eeid=#{CGI::escape(@guest1.email_encrypted)}", @guest1)
+Shortener::ShortenedUrl.generate("http://www.davidandmichael.com/?eeid=#{CGI::escape(@guest2.email_encrypted)}", @guest2)
+
+Response.create([{adults: '2', children: '1', guest_id: '1', comments: 'awesome', coming: true, friday_reception: true}])

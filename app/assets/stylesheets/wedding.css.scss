@@ -113,3 +113,18 @@ p {
 .button {
 	cursor: hand;
 }
+
+.nav {
+	position: fixed;
+	top: 50px;
+	right: 150px;
+	z-index: 0;
+	a:active {
+		color: #ffffff;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #ffffff;
+		text-decoration: underline;
+	}
+}

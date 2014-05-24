@@ -36,7 +36,7 @@
     %h3.articleSubTitle.textShadow Remember to RSVP
     - unless @guest.blank?
       #{@email} is your email
-      = render 'rsvp'
+      = render 'partials/form'
 
 =content_for :head do
   = javascript_include_tag "wedding"

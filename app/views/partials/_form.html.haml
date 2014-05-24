@@ -8,18 +8,23 @@
         - @response.errors.full_messages.each do |msg|
           %li= msg
   .field
+    = f.label :coming
+    = f.select :coming, [true, false]
+  .field
     = f.label :children
     = f.select :children, [1, 2]
   .field
     = f.label :adults
     = f.select :adults, [1, 2]
   .field
-    = f.label :comments
-    = f.text_area :comments
+    = f.label :friday_reception
+    = f.select :friday_reception, [true, false]
   .field
     = f.label :comments
     = f.text_area :comments
-  / .field
-  /   = f.hidden_field :redirect_url, :value => admin_root_path
-  .actions
-    = f.submit
+  - if @guest
+    .field
+      = f.hidden_field :guest_id, :value => @guest.id
+
+    
+%a{class: "nice medium radius blue button", href: "javascript:document.forms[0].submit();"} RSVP
