@@ -20,7 +20,7 @@
       Directions to
       %span.yellow venues
       %h3.articleSubTitle.textShadow Redwood grove
-      .whitebox
+      .box.transparent_white
         %p This is the map to the redwood grove
 %section.registry.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
@@ -31,12 +31,23 @@
 %section.rsvp.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
-      Remeber to 
+      Rememeber to 
       %span.yellow RSVP
     %h3.articleSubTitle.textShadow Remember to RSVP
     - unless @guest.blank?
-      #{@email} is your email
       = render 'partials/form'
+      
+#nav.transparent_white
+  .links
+    = link_to "Home", "javascript:$('#home').scrollTo();"
+    |
+    = link_to "Schedule", "javascript:$('#schedule').scrollTo();"
+    |
+    = link_to "Directions", "javascript:$('#directions').scrollTo();"
+    |
+    = link_to "Registry", "javascript:$('#registry').scrollTo();"
+    |
+    = link_to "RSVP", "javascript:$('#rsvp').scrollTo();"
 
 =content_for :head do
   = javascript_include_tag "wedding"

@@ -83,13 +83,16 @@ p {
   text-align: center;
 }
 
-.whitebox {
+.transparent_white {
+	background-color:rgba(255,255,255,0.5);
+}
+
+.box {
   position: relative;
   top: 10px;
   height: 300px;
   padding: 0 10%;
   text-align: center;
-	background-color:rgba(255,255,255,0.5);
 }
 
 .articleTitle {
@@ -114,17 +117,28 @@ p {
 	cursor: hand;
 }
 
-.nav {
+#nav {
 	position: fixed;
-	top: 50px;
-	right: 150px;
-	z-index: 0;
-	a:active {
+	top: 0px;
+	right: 50%;
+	width: 450px;
+	margin-right: -225px;
+	height: 60px;
+	.links {
+		margin: auto;
+		margin-top: 20px;
+		text-align: center;
 		color: #ffffff;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #ffffff;
-		text-decoration: underline;
+		a {
+			color: #ffffff;
+		}
+		a:active {
+			color: #ffffff;
+			text-decoration: none;
+		}
+		a:hover {
+			color: #ffffff;
+			text-decoration: underline;
+		}
 	}
 }
