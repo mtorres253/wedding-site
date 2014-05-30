@@ -1,4 +1,4 @@
-%section.home{"data-speed" => "2", "data-type" => "background"}
+%section#home{"data-speed" => "2", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
       - if @guest.blank?
@@ -8,13 +8,13 @@
       %span.yellow invited
     %h3.articleSubTitle.textShadow To David and Michael's Wedding
     =image_tag "davidandmichael.jpg"
-%section.schedule.boxShadow{"data-speed" => "4", "data-type" => "background"}
+%section#schedule.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
       Don't Be Tardy for the
       %span.yellow Party
     %h3.articleSubTitle.textShadow Friday 9/26/14
-%section.directions.boxShadow{"data-speed" => "2", "data-type" => "background"}
+%section#directions.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
       Directions to
@@ -22,13 +22,13 @@
       %h3.articleSubTitle.textShadow Redwood grove
       .box.transparent_white
         %p This is the map to the redwood grove
-%section.registry.boxShadow{"data-speed" => "4", "data-type" => "background"}
+%section#registry.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
       Gift
       %span.yellow registry
     %h3.articleSubTitle.textShadow Call or fill out this form
-%section.rsvp.boxShadow{"data-speed" => "2", "data-type" => "background"}
+%section#rsvp.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
       Remember to 
@@ -39,17 +39,13 @@
       
 #nav.transparent_white
   .links
-    = link_to "Home", "javascript:$('#home').scrollTo();"
+    = link_to "Home", "#", {:id => "home_link", :onclick => "$('html, body').animate({ scrollTop: parseInt($('#home').offset().top) }, 1000); return false;"}
     |
-    = link_to "Schedule", "javascript:$('#schedule').scrollTo();"
+    = link_to "Schedule", "#", {:id => "schedule_link", :onclick => "$('html, body').animate({ scrollTop: parseInt($('#schedule').offset().top) }, 1000); return false;"}
     |
-    = link_to "Directions", "javascript:$('#directions').scrollTo();"
+    = link_to "Directions", "#", {:id => "directions_link", :onclick => "$('html, body').animate({ scrollTop: parseInt($('#directions').offset().top) }, 1000); return false;"}
     |
-    = link_to "Registry", "javascript:$('#registry').scrollTo();"
+    = link_to "Registry", "#", {:id => "registry_link", :onclick => "$('html, body').animate({ scrollTop: parseInt($('#registry').offset().top) }, 1000); return false;"}
     |
-    = link_to "RSVP", "javascript:$('#rsvp').scrollTo();"
-
-=content_for :head do
-  = javascript_include_tag "wedding"
-  
+    = link_to "RSVP", "#", {:id => "rsvp_link", :onclick => "$('html, body').animate({ scrollTop: parseInt($('#rsvp').offset().top) }, 1000); return false;"}
   
