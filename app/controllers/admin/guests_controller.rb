@@ -71,7 +71,7 @@ class Admin::GuestsController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def guest_params
-      params.require(:guest).permit(:name, :email, :guest_id, :coming)
+      params.require(:guest).permit(:name, :email, :guest_id, :departure_city)
       # params[:guest]
     end
 end

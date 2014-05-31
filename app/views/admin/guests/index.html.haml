@@ -6,6 +6,7 @@
         %th ID
         %th Name
         %th Email
+        %th Departure City
         %th Short URL key
         %th Actions
     %tbody
@@ -14,6 +15,7 @@
           %td= guest.id
           %td= guest.name
           %td= guest.email
+          %td= guest.departure_city
           %td= guest.shortened_urls.first.unique_key
           %td
             = link_to 'Show', admin_guest_path(guest)
