@@ -9,9 +9,9 @@ $(document).ready ->
       coords = "50% " + yPos + "px"
       $bgobj.css backgroundPosition: coords
       return
-		$("[id$='_link']").click ->
+		$("[id$='_link']").on "click", ->
 		  $("html, body").animate
-		    scrollTop: parseInt($("##{event.target.name}").offset().top)
+		    scrollTop: parseInt($("##{this.name}").offset().top)
 		  , 1000
 		  return
 	  return
