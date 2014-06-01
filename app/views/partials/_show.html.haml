@@ -1,0 +1,17 @@
+.box.transparent_white
+  %p#notice= notice
+  
+  %p
+    = @response.coming
+  %p
+    = @response.adults
+  %p
+    = @response.children
+  %p
+    = @response.friday_reception
+  %p
+    = @response.comments
+  
+  = link_to 'Edit', edit_admin_response_path(@response)
+  |
+  = link_to 'Back', admin_responses_path

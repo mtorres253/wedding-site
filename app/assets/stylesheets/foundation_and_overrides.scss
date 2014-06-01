@@ -1204,14 +1204,14 @@ $topbar-link-font-family: $body-font-family;
 $topbar-link-text-transform: none;
 $topbar-link-padding: $topbar-height / 3;
 
-// $topbar-button-font-size: 0.75rem;
-// $topbar-button-top: 7px;
+$topbar-button-font-size: 0.75rem;
+$topbar-button-top: 7px;
 
-// $topbar-dropdown-label-color: #777;
-// $topbar-dropdown-label-text-transform: uppercase;
-// $topbar-dropdown-label-font-weight: bold;
-// $topbar-dropdown-label-font-size: rem-calc(10);
-// $topbar-dropdown-label-bg: #333;
+$topbar-dropdown-label-color: #777;
+$topbar-dropdown-label-text-transform: uppercase;
+$topbar-dropdown-label-font-weight: bold;
+$topbar-dropdown-label-font-size: rem-calc(10);
+$topbar-dropdown-label-bg: #333;
 
 // Top menu icon styles
 $topbar-menu-link-transform: uppercase;
@@ -1240,9 +1240,9 @@ $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
 // VISIBILITY CLASSES
 //
 
-// $include-html-visibility-classes: $include-html-classes;
-// $include-table-visibility-classes: true;
-// $include-legacy-visibility-classes: true;
+$include-html-visibility-classes: $include-html-classes;
+$include-table-visibility-classes: true;
+$include-legacy-visibility-classes: true;
 
 //
 // RANGE SLIDER

@@ -29,7 +29,8 @@ class Admin::ResponsesController < AdminController
 
     respond_to do |format|
       if @response.save
-        format.html { redirect_to :back, notice: 'Your RSVP has been saved' }
+        @comments = 'Your RSVP info has been saved!'
+        format.html { render partial: 'partials/show', notice: 'Your RSVP has been saved' }
         format.json { render action: 'show', status: :created, location: @response }
       else
         format.html { render action: 'new' }
@@ -43,7 +44,8 @@ class Admin::ResponsesController < AdminController
   def update
     respond_to do |format|
       if @response.update(response_params)
-        format.html { redirect_to :back, notice: 'Your RSVP was successfully updated' }
+        @comments = 'Your RSVP info has been saved!'
+        format.html { render partial: 'partials/show', notice: 'Your RSVP was successfully updated' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

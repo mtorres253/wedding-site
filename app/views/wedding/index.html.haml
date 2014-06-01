@@ -10,17 +10,17 @@
           %span Menu
     %section.top-bar-section
       / Right Nav Section
-      %ul.left
+      %ul.right
         %li
-          = link_to "Home", "#", {:id => "home_link", :name => "home"}
+          = link_to "Home", "#", {:id => "home_link", :name => "home", "data-no-turbolink" => ""}
         %li
-          = link_to "Schedule of Events", "#", {:id => "schedule_link", :name => "schedule"}
+          = link_to "Schedule of Events", "#", {:id => "schedule_link", :name => "schedule", "data-no-turbolink" => ""}
         %li
-          = link_to "Directions to Venues", "#", {:id => "directions_link", :name => "directions"}
+          = link_to "Directions to Venues", "#", {:id => "directions_link", :name => "directions", "data-no-turbolink" => ""}
         %li
-          = link_to "Gift Registry", "#", {:id => "registry_link", :name => "registry"}
+          = link_to "Gift Registry", "#", {:id => "registry_link", :name => "registry", "data-no-turbolink" => ""}
         %li
-          = link_to "RSVP", "#", {:id => "rsvp_link", :name => "rsvp"}
+          = link_to "RSVP", "#", {:id => "rsvp_link", :name => "rsvp", "data-no-turbolink" => ""}
 
 %section#home{"data-speed" => "2", "data-type" => "background"}
   .content
