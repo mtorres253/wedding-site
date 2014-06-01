@@ -11,8 +11,16 @@ $(document).ready ->
       return
 		$("[id$='_link']").on "click", ->
 		  $("html, body").animate
-		    scrollTop: parseInt($("##{this.name}").offset().top)
+		    scrollTop: parseInt($("##{this.name}").offset().top - 45)
 		  , 1000
 		  return
+		$("[id^='edit_response']").on("ajax:success", (e, data, status, xhr) ->
+		    $("[id^='edit_response']").html "<p>SUCCESS</p>"
+		  ).on "ajax:error", (e, xhr, status, error) ->
+		    $("[id^='edit_response']").append "<p>ERROR</p>"
+		$("[id^='new_response']").on("ajax:success", (e, data, status, xhr) ->
+		    $("[id^='new_response']").html "<p>SUCCESS</p>"
+		  ).on "ajax:error", (e, xhr, status, error) ->
+		    $("[id^='new_response']").append "<p>ERROR</p>"
 	  return
 	return

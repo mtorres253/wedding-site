@@ -1,6 +1,6 @@
 class Admin::ResponsesController < AdminController
   before_action :set_response, only: [:show, :edit, :update, :destroy]
-
+  respond_to :json
   # GET /responses
   # GET /responses.json
   def index
@@ -29,7 +29,7 @@ class Admin::ResponsesController < AdminController
 
     respond_to do |format|
       if @response.save
-        format.html { redirect_to :back, notice: 'Your RSVP has been sent' }
+        format.html { redirect_to :back, notice: 'Your RSVP has been saved' }
         format.json { render action: 'show', status: :created, location: @response }
       else
         format.html { render action: 'new' }

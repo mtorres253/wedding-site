@@ -1,11 +1,35 @@
+.contain-to-grid.sticky
+  %nav.top-bar{"data-topbar" => ""}
+    %ul.title-area
+      %li.name
+        %h1
+          %a{href: "#"} David and Michael's Wedding
+      / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+      %li.toggle-topbar.menu-icon
+        %a{href: "#"}
+          %span Menu
+    %section.top-bar-section
+      / Right Nav Section
+      %ul.left
+        %li
+          = link_to "Home", "#", {:id => "home_link", :name => "home"}
+        %li
+          = link_to "Schedule of Events", "#", {:id => "schedule_link", :name => "schedule"}
+        %li
+          = link_to "Directions to Venues", "#", {:id => "directions_link", :name => "directions"}
+        %li
+          = link_to "Gift Registry", "#", {:id => "registry_link", :name => "registry"}
+        %li
+          = link_to "RSVP", "#", {:id => "rsvp_link", :name => "rsvp"}
+
 %section#home{"data-speed" => "2", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
       - if @guest.blank?
-        You are
+        You Are
       - else
-        #{@guest.name}, you are
-      %span.yellow invited
+        #{@guest.name}, You Are
+      %span.yellow Invited
     %h3.articleSubTitle.textShadow To David and Michael's Wedding
     =image_tag "davidandmichael.jpg"
 %section#schedule.boxShadow{"data-speed" => "4", "data-type" => "background"}
@@ -18,7 +42,7 @@
   .content
     %h2.articleTitle.textShadow
       Directions to
-      %span.yellow venues
+      %span.yellow Venues
       %h3.articleSubTitle.textShadow Redwood grove
       .box.transparent_white
         %p This is the map to the redwood grove
@@ -26,7 +50,7 @@
   .content
     %h2.articleTitle.textShadow
       Gift
-      %span.yellow registry
+      %span.yellow Registry
     %h3.articleSubTitle.textShadow Call or fill out this form
 %section#rsvp.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
@@ -36,15 +60,3 @@
     %h3.articleSubTitle.textShadow Remember to RSVP
     - unless @guest.blank?
       = render 'partials/form'
-      
-#nav.transparent_white
-  .links
-    = link_to "Home", "#", {:id => "home_link", :name => "home"}
-    |
-    = link_to "Schedule", "#", {:id => "schedule_link", :name => "schedule"}
-    |
-    = link_to "Directions", "#", {:id => "directions_link", :name => "directions"}
-    |
-    = link_to "Registry", "#", {:id => "registry_link", :name => "registry"}
-    |
-    = link_to "RSVP", "#", {:id => "rsvp_link", :name => "rsvp"}

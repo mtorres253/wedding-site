@@ -34,7 +34,7 @@ p {
 
 #home {
   position: relative;
-  margin: 0 auto;
+  margin: 45,auto;
   width: 100%;
   height: 750px;
   background: url("http://wallpoper.com/images/00/43/76/70/point-reyes-in-the-fog_00437670.jpg") 20% 40% repeat fixed;
@@ -98,7 +98,7 @@ p {
 .articleTitle {
   margin-bottom: 0.25em;
   font-family: 'Wellfleet', cursive;
-  font-size: 7em;
+  font-size: 5em;
   line-height: 1em;
   color: #fff;
   .yellow {
@@ -108,7 +108,7 @@ p {
 
 .articleSubTitle {
   font-family: 'Armata', cursive;
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1em;
   color: #fff;
 }
@@ -117,28 +117,4 @@ p {
 	cursor: hand;
 }
 
-#nav {
-	position: fixed;
-	top: 0px;
-	right: 50%;
-	width: 450px;
-	margin-right: -225px;
-	height: 60px;
-	.links {
-		margin: auto;
-		margin-top: 20px;
-		text-align: center;
-		color: #ffffff;
-		a {
-			color: #ffffff;
-		}
-		a:active {
-			color: #ffffff;
-			text-decoration: none;
-		}
-		a:hover {
-			color: #ffffff;
-			text-decoration: underline;
-		}
-	}
-}
+
