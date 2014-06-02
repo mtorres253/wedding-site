@@ -54,9 +54,15 @@
     %h3.articleSubTitle.textShadow Call or fill out this form
 %section#rsvp.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
-    %h2.articleTitle.textShadow
-      Remember to 
-      %span.yellow RSVP
-    %h3.articleSubTitle.textShadow Remember to RSVP
-    - unless @guest.blank?
-      = render 'partials/form'
+    - if !@guest.blank?
+      - if @guest.response
+        = render 'partials/show'
+      - else
+        %h2.articleTitle.textShadow
+          Remember to
+          %span.yellow RSVP
+        = render 'partials/form'
+    - else
+      %h2.articleTitle.textShadow
+        RSVP by Clicking on the Link
+      
