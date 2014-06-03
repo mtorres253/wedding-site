@@ -1,29 +1,32 @@
--if @response.coming
-  %h2.articleTitle.textShadow
-    We can't wait to see you!
-  %h3.articleSubTitle.textShadow Your deets:
-  .box.transparent_white
-    %p I'm bringing 
-    = @response.adults 
-    - if @response.adults > 1
-      adults
-    - else
-      adult
-    - if @response.children > 0
-      and
-      = @response.children
-      - if @response.children > 1
-        children
+.content
+  -if @response.coming
+    %h2.articleTitle.textShadow
+      We can't wait to see you!
+    %h3.articleSubTitle.textShadow Your deets:
+    .box.transparent_white
+      %p I'm bringing 
+      = @response.adults 
+      - if @response.adults > 1
+        adults
       - else
-        child
-    - if @response.friday_reception
-      %p I'm coming to the Friday thingie
-    - else
-      %p I'm not coming to the Friday thingie
-    - if @response.comments
-      %p And I have something to say: #{@response.comments}
--else
-  %h2.articleTitle.textShadow
-    We're sorry you can't make it :(
-  %h3.articleSubTitle.textShadow Let us know if you change your mind :)
-= link_to "Change my RSVP"
+        adult
+      - if @response.children > 0
+        and
+        = @response.children
+        - if @response.children > 1
+          children
+        - else
+          child
+      - if @response.friday_reception
+        %p I'm coming to the Friday thingie
+      - else
+        %p I'm not coming to the Friday thingie
+      - if @response.comments
+        %p And I've Got Something to Say: #{@response.comments}
+      = link_to "Change my RSVP", edit_admin_response_path(@response.id), :remote => true
+  -else
+    %h2.articleTitle.textShadow
+      We're sorry you can't make it :(
+    %h3.articleSubTitle.textShadow Let us know if you change your mind :)
+    .box.transparent_white
+      = link_to "Change my RSVP", edit_admin_response_path(@response.id), :remote => true

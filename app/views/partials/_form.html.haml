@@ -1,31 +1,35 @@
-= form_for [:admin, @response], remote: true do |f|
-  - if @response.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@response.errors.count, "error")
-        prohibited this response from being saved:
-      %ul
-        - @response.errors.full_messages.each do |msg|
-          %li= msg
-  .field
-    = f.label :coming
-    = f.select :coming, [true, false]
-  .field
-    = f.label :children
-    = f.select :children, [1, 2]
-  .field
-    = f.label :adults
-    = f.select :adults, [1, 2]
-  .field
-    = f.label :friday_reception
-    = f.select :friday_reception, [true, false]
-  .field
-    = f.label :comments
-    = f.text_area :comments
-  - if @guest
+.content
+  %h2.articleTitle.textShadow
+    Remember to
+    %span.yellow RSVP
+  = form_for [:admin, @response], remote: true do |f|
+    - if @response.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@response.errors.count, "error")
+          prohibited this response from being saved:
+        %ul
+          - @response.errors.full_messages.each do |msg|
+            %li= msg
     .field
-      = f.hidden_field :guest_id, :value => @guest.id
+      = f.label :coming
+      = f.select :coming, [true, false]
+    .field
+      = f.label :children
+      = f.select :children, [1, 2]
+    .field
+      = f.label :adults
+      = f.select :adults, [1, 2]
+    .field
+      = f.label :friday_reception
+      = f.select :friday_reception, [true, false]
+    .field
+      = f.label :comments
+      = f.text_area :comments
+    - if @guest
+      .field
+        = f.hidden_field :guest_id, :value => @guest.id
 
-    
-  .actions
-    = f.submit 'Save'
+  
+    .actions
+      = f.submit 'Save'

@@ -15,11 +15,11 @@ $(document).ready ->
 		  , 1000
 		  return
 		$("[id^='edit_response']").on("ajax:success", (e, data, status, xhr) ->
- 		    $("[id^='edit_response']").html data
+ 		    $("#rsvp").html data
 		  ).on "ajax:error", (e, xhr, status, error) ->
 		    $("[id^='edit_response']").append "<p>#{error}</p>"
 		$("[id^='new_response']").on("ajax:success", (e, data, status, xhr) ->
-		    $("[id^='new_response']").html xhr.responseText
+		    $("#rsvp").html data
 		  ).on "ajax:error", (e, xhr, status, error) ->
 		    $("[id^='new_response']").append "<p>#{error}</p>"
 	  return
