@@ -1,6 +1,7 @@
 class Admin::GuestsController < AdminController
+  http_basic_authenticate_with name: "michael", password: "blinking4"
   before_action :set_guest, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /guests
   # GET /guests.json
   def index

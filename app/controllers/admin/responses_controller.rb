@@ -1,6 +1,8 @@
 class Admin::ResponsesController < AdminController
+  http_basic_authenticate_with name: "michael", password: "blinking4", only: [:index, :show, :destroy]
   before_action :set_response, only: [:show, :edit, :update, :destroy]
   respond_to :json
+  
   # GET /responses
   # GET /responses.json
   def index
