@@ -3,11 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
   $("div[data-type=\"background\"]").each ->
-    $bgobj = undefined
     $bgobj = $(this)
     $(window).scroll ->
-      coords = undefined
-      yPos = undefined
       yPos = -($(window).scrollTop() / $bgobj.data("speed"))
       coords = "50% " + yPos + "px"
       $bgobj.css backgroundPosition: coords
@@ -19,8 +16,11 @@ $(document).ready ->
       scrollTop: parseInt($("#" + @name).offset().top - 45)
     , 1000
     return
+
   form_setup()
+  # For FF and Chrome
   $("#rsvp").bind "DOMSubtreeModified", form_setup
+  # For IE
   $("#rsvp").bind "propertychange", form_setup
   return
 
