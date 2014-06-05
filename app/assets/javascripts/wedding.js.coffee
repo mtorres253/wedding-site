@@ -3,26 +3,30 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
   $("div[data-type=\"background\"]").each ->
+    $bgobj = undefined
     $bgobj = $(this)
     $(window).scroll ->
+      coords = undefined
+      yPos = undefined
       yPos = -($(window).scrollTop() / $bgobj.data("speed"))
       coords = "50% " + yPos + "px"
       $bgobj.css backgroundPosition: coords
       return
-		$("[id$='_link']").on "click", ->
-		  $("html, body").animate
-		    scrollTop: parseInt($("##{this.name}").offset().top - 45)
-		  , 1000
-		  return
-		$("[id^='edit_response']").on("ajax:success", (e, data, status, xhr) ->
- 		    $("#rsvp").html data
-		  ).on "ajax:error", (e, xhr, status, error) ->
-		    $("[id^='edit_response']").append "<p>#{error}</p>"
-		$("[id^='new_response']").on("ajax:success", (e, data, status, xhr) ->
-		    $("#rsvp").html data
-		  ).on "ajax:error", (e, xhr, status, error) ->
-		    $("[id^='new_response']").append "<p>#{error}</p>"
-	  return
-	return
 
 
+  $("[id$='_link']").on "click", ->
+    $("html, body").animate
+      scrollTop: parseInt($("#" + @name).offset().top - 45)
+    , 1000
+    return
+  form_setup()
+  $("#rsvp").bind "DOMSubtreeModified", form_setup
+  $("#rsvp").bind "propertychange", form_setup
+  return
+
+form_setup = ->
+  $("form").first().on("ajax:success", (e, data, status, xhr) ->
+    $("#rsvp").html xhr.responseText
+  ).on "ajax:error", (e, xhr, status, error) ->
+    $("#rsvp").append "<p>" + error + "</p>"
+  return

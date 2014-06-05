@@ -31,7 +31,6 @@ class Admin::ResponsesController < AdminController
 
     respond_to do |format|
       if @response.save
-        @comments = 'Your RSVP info has been saved!'
         format.html { render partial: 'partials/show', notice: 'Your RSVP has been saved' }
         format.json { render action: 'show', status: :created, location: @response }
       else
@@ -46,7 +45,6 @@ class Admin::ResponsesController < AdminController
   def update
     respond_to do |format|
       if @response.update(response_params)
-        @comments = 'Your RSVP info has been saved!'
         format.html { render partial: 'partials/show', notice: 'Your RSVP was successfully updated' }
         format.json { head :no_content }
       else

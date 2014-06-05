@@ -5,28 +5,29 @@
     %h3.articleSubTitle.textShadow Your deets:
     .box.transparent_white
       %p I'm bringing 
-      = @response.adults 
-      - if @response.adults > 1
-        adults
-      - else
-        adult
-      - if @response.children > 0
-        and
-        = @response.children
-        - if @response.children > 1
-          children
+      %p 
+        = @response.adults 
+        - if @response.adults > 1
+          adults
         - else
-          child
-      - if @response.friday_reception
-        %p I'm coming to the Friday thingie
-      - else
-        %p I'm not coming to the Friday thingie
-      - if @response.comments
-        %p And I've Got Something to Say: #{@response.comments}
-      = link_to "Change my RSVP", edit_admin_response_path(@response.id), :remote => true
+          adult
+        - if @response.children > 0
+          and
+          = @response.children
+          - if @response.children > 1
+            children
+          - else
+            child
+        - if @response.friday_reception
+          %p I'm coming to the Friday thingie
+        - else
+          %p I'm not coming to the Friday thingie
+        - if @response.comments
+          %p And I've Got Something to Say: #{@response.comments}
+      %p= link_to "Change my RSVP", "javascript:$('#rsvp').html('#{escape_javascript(render :partial => 'partials/form')}');"
   -else
     %h2.articleTitle.textShadow
       We're sorry you can't make it :(
     %h3.articleSubTitle.textShadow Let us know if you change your mind :)
     .box.transparent_white
-      = link_to "Change my RSVP", edit_admin_response_path(@response.id), :remote => true
+    %p= link_to "Change my RSVP", "javascript:$('#rsvp').html('#{escape_javascript(render :partial => 'partials/form')}');"
