@@ -17,14 +17,14 @@ $(document).ready ->
     , 1000
     return
 
-  form_setup()
+  rsvp_setup()
   # For FF and Chrome
-  $("#rsvp").bind "DOMSubtreeModified", form_setup
+  $("#rsvp").bind "DOMSubtreeModified", rsvp_setup
   # For IE
-  $("#rsvp").bind "propertychange", form_setup
+  $("#rsvp").bind "propertychange", rsvp_setup
   return
 
-form_setup = ->
+rsvp_setup = ->
   $("form").first().on("ajax:success", (e, data, status, xhr) ->
     $("#rsvp").html xhr.responseText
   ).on "ajax:error", (e, xhr, status, error) ->
