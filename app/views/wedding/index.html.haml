@@ -30,28 +30,41 @@
       - else
         #{@guest.name}, You Are
       %span.yellow Invited
-    %h3.articleSubTitle.textShadow To David and Michael's Wedding
-    =image_tag "davidandmichael.jpg"
+    .box.transparent_white
+      %h3.articleSubTitle To David and Michael's Wedding
+      =image_tag "davidandmichael.jpg"
 %section#schedule.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
       Don't Be Tardy for the
       %span.yellow Party
-    %h3.articleSubTitle.textShadow Friday 9/26/14
+    .box.transparent_white
+      %ul.small-block-grid-3
+        %li
+          %h3.articleSubTitle Friday 9/26/14
+        %li
+          %h3.articleSubTitle Saturday 9/27/14
+        %li
+          %h3.articleSubTitle Sunday 9/28/14
 %section#directions.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
       Directions to
       %span.yellow Venues
-      %h3.articleSubTitle.textShadow Redwood grove
-      .box.transparent_white
-        %p This is the map to the redwood grove
+    .box.transparent_white
+      %ul.small-block-grid-2
+        %li
+          %h3.articleSubTitle Samuel P. Taylor Redwood Grove
+        %li
+          %h3.articleSubTitle Point Reyes Seashore Lodge
+
 %section#registry.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
       Gift
       %span.yellow Registry
-    %h3.articleSubTitle.textShadow Call or fill out this form
+    .box.transparent_white
+      %h3.articleSubTitle Call or fill out this form
 %section#rsvp.boxShadow{"data-speed" => "2", "data-type" => "background"}
   - if !@guest.blank?
     - if @guest.response
@@ -59,6 +72,6 @@
     - else
       = render 'partials/form'
   - else
-    %h2.articleTitle.textShadow
+    %h2.articleTitle
       RSVP by Clicking on the Link
       

@@ -11,7 +11,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 1em;
   line-height: 20px;
   font-weight: 300;
 	color: #000;
@@ -20,7 +20,7 @@ body {
 }
 
 p {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .textShadow {
@@ -84,16 +84,22 @@ p {
 }
 
 .transparent_white {
-	background-color:rgba(255,255,255,0.8);
+	background-color:rgba(255,255,255,0.85);
 }
 
 .box {
   position: relative;
   top: 10px;
-  padding: 0 10%;
+  padding: 20px;
 	margin: auto;
 	width: 80%;
   text-align: center;
+}
+
+.rsvp_inner_box {
+	width: 100%;
+	padding: 20px;
+//	border: 10px solid #9900CC;
 }
 
 .articleTitle {
@@ -109,12 +115,17 @@ p {
 
 .articleSubTitle {
   font-family: 'Armata', cursive;
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1em;
-  color: #fff;
+  color: #333;
 }
 
 .button {
 	cursor: hand;
 }
+
+form {
+	text-align: left;
+}
+
 

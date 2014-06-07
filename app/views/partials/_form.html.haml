@@ -1,58 +1,50 @@
 .content
   %h2.articleTitle.textShadow
-    Enter Your
     %span.yellow RSVP
     Below
   .box.transparent_white
-    = form_for [:admin, @response], remote: true do |f|
-      - if @response.errors.any?
-        #error_explanation
-          %h2
-            = pluralize(@response.errors.count, "error")
-            prohibited this response from being saved:
-          %ul
-            - @response.errors.full_messages.each do |msg|
-              %li= msg
-      .row
-        .large-2.columns
-          = f.label :coming
-          = f.select :coming, [true, false], {placeholder: "large-12.columns"}
-      .row
-        .large-2.columns
-          = f.label :adults
-          = f.select :adults, [1, 2], {placeholder: "large-4.columns"}
-        .large-2.columns
-          = f.label :children
-          = f.select :children, [1, 2], {placeholder: "large-4.columns"}
-        .large-5.columns
-          = f.label :friday_reception
-          = f.select :friday_reception, [true, false], {placeholder: "large-5.columns"}
-      .row
-        .large-12.columns
-          = f.label :comments
-          = f.text_area :comments
-      .row
-        .large-12.columns
-          = f.submit 'Save'
-      
-    / .field
-    /   = f.label :coming
-    /   = f.select :coming, [true, false]
-    / .field
-    /   = f.label :children
-    /   = f.select :children, [1, 2]
-    / .field
-    /   = f.label :adults
-    /   = f.select :adults, [1, 2]
-    / .field
-    /   = f.label :friday_reception
-    /   = f.select :friday_reception, [true, false]
-    / .field
-    /   = f.label :comments
-    /   = f.text_area :comments
-    / - if @guest
-    /   .field
-    /     = f.hidden_field :guest_id, :value => @guest.id
-    / 
-    / .actions
-    /   = f.submit 'Save'
+    .rsvp_inner_box
+      = form_for [:admin, @response], remote: true do |f|
+        - if @response.errors.any?
+          #error_explanation
+            %h2
+              = pluralize(@response.errors.count, "error")
+              prohibited this response from being saved:
+            %ul
+              - @response.errors.full_messages.each do |msg|
+                %li= msg
+        .row
+          .large-4.columns
+            %button{type: "button", onclick: "javascript:$('#response_coming_true').prop('checked', true)", :class => "medium button [radius round]"} I'm coming!
+          .large-4.columns
+            %button{type: "button", onclick: "javascript:$('#response_coming_false').prop('checked', true)", :class => "medium button [radius round]"} I can't make it.
+        .row.hidden
+          .large-2.columns
+            = f.label :coming_true, "I am coming"
+            = f.radio_button :coming, true, {placeholder: "large-2.columns"}
+          .large-2.columns
+            = f.label :coming_false, "I am not coming"
+            = f.radio_button :coming, false, {placeholder: "large-2.columns"}
+          .large-8.columns &nbsp;
+        .row
+          .large-2.columns
+            = f.label :adults
+            = f.select :adults, [1, 2], {placeholder: "large-2.columns"}
+          .large-2.columns
+            = f.label :children
+            = f.select :children, [1, 2], {placeholder: "large-2.columns"}
+          .large-2.columns
+            = f.label :friday_reception
+            = f.select :friday_reception, [true, false], {placeholder: "large-2.columns"}
+          .large-6.columns &nbsp;
+        .row
+          .large-12.columns
+            = f.label :comments
+            = f.text_area :comments
+            - if @guest
+              .field
+                = f.hidden_field :guest_id, :value => @guest.id
+        .row
+          .large-12.columns
+            / = f.submit 'Save'
+            %button{type: "button", onclick: "javascript:$('form').first().submit()", :class => "tiny button [radius round]"} Save My RSVP

@@ -2,10 +2,10 @@
   -if @response.coming
     %h2.articleTitle.textShadow
       We can't wait to see you!
-    %h3.articleSubTitle.textShadow Your deets:
     .box.transparent_white
-      %p I'm bringing 
+      %h3.articleSubTitle Your deets:
       %p 
+        = "I'm bringing" 
         = @response.adults 
         - if @response.adults > 1
           adults
@@ -30,4 +30,4 @@
       We're sorry you can't make it :(
     %h3.articleSubTitle.textShadow Let us know if you change your mind :)
     .box.transparent_white
-    %p= link_to "Change my RSVP", "javascript:void();", {:class => "tiny button [radius round]", :onclick => "$('#rsvp').html('#{escape_javascript(render :partial => 'partials/form')}');"}
+    %p= link_to "Change My RSVP", "javascript:void();", {:class => "tiny button [radius round]", :onclick => "$('#rsvp').html('#{escape_javascript(render :partial => 'partials/form')}');"}
