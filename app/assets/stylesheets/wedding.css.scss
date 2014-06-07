@@ -9,9 +9,10 @@
 
 @import url(http://fonts.googleapis.com/css?family=Armata);
 
+@import "foundation/components/buttons";
+
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;
   line-height: 20px;
   font-weight: 300;
 	color: #000;
@@ -92,12 +93,13 @@ p {
   top: 10px;
   padding: 20px;
 	margin: auto;
-	width: 80%;
+	width: 90%;
   text-align: center;
 }
 
 .rsvp_inner_box {
-	width: 100%;
+	width: 70%;
+	margin: auto;
 	padding: 20px;
 //	border: 10px solid #9900CC;
 }
@@ -105,7 +107,7 @@ p {
 .articleTitle {
   margin-bottom: 0.25em;
   font-family: 'Wellfleet', cursive;
-  font-size: 5em;
+  font-size: 4.5em;
   line-height: 1em;
   color: #fff;
   .yellow {
@@ -126,6 +128,27 @@ p {
 
 form {
 	text-align: left;
+	.hidden {
+		display: none;
+	}
 }
 
+.selected_button { 
+	@include button;
+	background: green;
+}
 
+.center {
+	margin: auto;
+	display: block;
+}
+
+.left {
+	align: left;
+	display: block;
+}
+
+.right {
+	align: right;
+	display: block;
+}

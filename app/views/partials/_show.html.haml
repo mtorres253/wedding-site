@@ -24,10 +24,10 @@
           %p I'm not coming to the Friday thingie
         - if @response.comments
           %p And I've Got Something to Say: #{@response.comments}
-      %p= link_to "Change my RSVP", "javascript:void();", {:class => "tiny button [radius round]", :onclick => "$('#rsvp').html('#{escape_javascript(render :partial => 'partials/form')}');"}
+      %p= link_to "Change my RSVP", "javascript:void();", {:class => "medium button [radius round]", :onclick => "$('#rsvp').html('#{escape_javascript(render :partial => 'partials/form')}');"}
   -else
     %h2.articleTitle.textShadow
-      We're sorry you can't make it :(
-    %h3.articleSubTitle.textShadow Let us know if you change your mind :)
+      We'll Miss You :(
     .box.transparent_white
-    %p= link_to "Change My RSVP", "javascript:void();", {:class => "tiny button [radius round]", :onclick => "$('#rsvp').html('#{escape_javascript(render :partial => 'partials/form')}');"}
+      %h3.articleSubTitle Let us know if you change your mind :)
+      %p= link_to "Change My RSVP", "javascript:void();", {:class => "medium button [radius round]", :onclick => "$('#rsvp').html('#{escape_javascript(render :partial => 'partials/form')}');"}
