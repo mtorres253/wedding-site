@@ -16,7 +16,8 @@ WeddingSite::Application.routes.draw do
   
   resources :wedding do               
    collection do         
-    post :find_guest       
+    post :find_guest 
+    get :find_guest       
    end        
   end      
   # The priority is based upon order of creation: first created -> highest priority.
