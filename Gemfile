@@ -15,6 +15,9 @@ gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+# Use Font Awesome for icons
+gem "font-awesome-rails"
+
 # Use Foundation for grid and styles
 gem 'foundation-rails'
 
@@ -32,6 +35,7 @@ gem 'haml', '~> 4.0.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

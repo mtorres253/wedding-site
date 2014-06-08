@@ -28,4 +28,14 @@ rsvp_setup = ->
     $("#rsvp").html xhr.responseText
   ).on "ajax:error", (e, xhr, status, error) ->
     $("#rsvp").append "<p>" + error + "</p>"
+
+  
+  $("#coming-button").on "click", ->
+    $('#response_coming_true').prop('checked', true);
+    $("#coming-button").switchClass "deselected", "selected", 1000, "easeInOutQuad"
+    $("#not-coming-button").switchClass "selected", "deselected", 1000, "easeInOutQuad"
+  $("#not-coming-button").on "click", ->
+    $('#response_coming_false').prop('checked', true);
+    $("#not-coming-button").switchClass "deselected", "selected", 1000, "easeInOutQuad"
+    $("#coming-button").switchClass "selected", "deselected", 1000, "easeInOutQuad"
   return

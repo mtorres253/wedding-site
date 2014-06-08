@@ -7,9 +7,13 @@
       .row
         .large-2.columns &nbsp;
         .large-4.columns
-          %button{type: "button", onclick: "javascript:$('#response_coming_true').prop('checked', true)", :class => "medium button left [radius round]"} I'm coming!
+          %button{type: "button", id: "coming-button", :class => coming_class(@response.coming)}
+            %i{:class => 'fa fa-check-square'} 
+            &nbsp; I'm Coming
         .large-4.columns
-          %button{type: "button", onclick: "javascript:$('#response_coming_false').prop('checked', true)", :class => "medium button right [radius round]"} I can't make it.
+          %button{type: "button", id: "not-coming-button", :class => not_coming_class(@response.coming)} 
+            %i{:class => 'fa fa-check-square'} 
+            &nbsp; I Can't Make It
         .large-2.columns &nbsp;
       = form_for [:admin, @response], remote: true do |f|
         - if @response.errors.any?
@@ -33,7 +37,7 @@
             = f.select :adults, [1, 2], {placeholder: "large-2.columns"}
           .large-2.columns
             = f.label :children
-            = f.select :children, [1, 2], {placeholder: "large-2.columns"}
+            = f.select :children, [0, 1, 2], {placeholder: "large-2.columns"}
           .large-4.columns
             = f.label :friday_reception
             = f.select :friday_reception, [["I'm coming",true], ["I'm not coming", false]], {placeholder: "large-3.columns"}

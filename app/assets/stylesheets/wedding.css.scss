@@ -11,6 +11,23 @@
 
 @import "foundation/components/buttons";
 
+@import "font-awesome";
+
+@media #{$small-up} { }
+@media #{$small-only} { }
+
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 20px;
@@ -133,9 +150,25 @@ form {
 	}
 }
 
-.selected_button { 
+.selected { 
 	@include button;
 	background: green;
+	background-color: green;
+}
+.selected:hover, .selected:visited, .selected:focus  {
+	background: green;
+	background-color: green;
+}
+
+.deselected { 
+	@include button;
+	background: #cccccc;
+	background-color: #cccccc;
+}
+
+.deselected:hover, .deselected:visited {
+	background: green;
+	background-color: green;
 }
 
 .center {
