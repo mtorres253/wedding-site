@@ -14,7 +14,11 @@ WeddingSite::Application.routes.draw do
   
   match '/:id' => "shortener/shortened_urls#show", :via => [:get]
   
-  
+  resources :wedding do               
+   collection do         
+    post :find_guest       
+   end        
+  end      
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

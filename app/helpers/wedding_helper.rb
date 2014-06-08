@@ -32,4 +32,5 @@ module WeddingHelper
   def rsvp_comments response
     @copy_comments = response.comments? ? "And I've got something to say: #{response.comments}" : nil
   end
+  
 end

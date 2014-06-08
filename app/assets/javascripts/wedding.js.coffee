@@ -28,7 +28,6 @@ rsvp_setup = ->
     $("#rsvp").html xhr.responseText
   ).on "ajax:error", (e, xhr, status, error) ->
     $("#rsvp").append "<p>" + error + "</p>"
-
   
   $("#coming-button").on "click", ->
     $('#response_coming_true').prop('checked', true);

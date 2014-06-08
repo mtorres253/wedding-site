@@ -54,10 +54,6 @@ class Admin::ResponsesController < AdminController
     end
   end
   
-  def find_response
-    @guest_id = Guest.find_by_email_encrypted()
-    @response = Response.find_by_guest_id(Guest.find_by_encrypted_email(response_params))
-  end
   # DELETE /responses/1
   # DELETE /responses/1.json
   def destroy
