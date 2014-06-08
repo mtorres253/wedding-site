@@ -13,7 +13,7 @@ $(document).ready ->
   $("[id$='_link']").on "click", ->
     $("html, body").animate
       scrollTop: parseInt($("#" + @name).offset().top - 45)
-    , 1000
+      , 1000
     return
 
   rsvp_setup()
