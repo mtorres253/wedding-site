@@ -26,18 +26,16 @@
   .content
     %h2.articleTitle.textShadow
       - if @guest.blank?
-        You Are
+        You Are Invited
       - else
-        #{@guest.name}, You Are
-      %span.yellow Invited
+        #{@guest.name}, You Are Invited
     .box.transparent_white
       %h3.articleSubTitle To David and Michael's Wedding
       =image_tag "davidandmichael.jpg"
 %section#schedule.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
-      Don't Be Tardy for the
-      %span.yellow Party
+      Schedule of Events
     .box.transparent_white
       %ul.small-block-grid-3
         %li
@@ -49,8 +47,7 @@
 %section#directions.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
-      Directions to
-      %span.yellow Venues
+      Directions to Venues
     .box.transparent_white
       %ul.small-block-grid-2
         %li
@@ -62,18 +59,20 @@
 %section#registry.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
-      Gift
-      %span.yellow Registry
+      Gift Registry
     .box.transparent_white
       %h3.articleSubTitle Call or fill out this form
 %section#rsvp.boxShadow{"data-speed" => "2", "data-type" => "background"}
-  - if !@guest.blank?
-    - if @guest.response
-      = render 'partials/show'
-    - else
-      = render 'partials/form'
-  - else
-    = render 'partials/default'
+  .content
+    %h2.articleTitle RSVP by 7/27/14
+    #rsvp_content
+      - if !@guest.blank?
+        - if @guest.response
+          = render 'partials/show'
+        - else
+          = render 'partials/form'
+      - else
+        = render 'partials/default'
           
       
         

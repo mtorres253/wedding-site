@@ -1,13 +1,15 @@
-.content
-  %h2.articleTitle RSVP by 7/27/14
-  .box.transparent_white
-    %h3.articleSubTitle Enter your email to search for your RSVP
-    = form_tag({ controller: "wedding", action: "find_guest", method: "post" }, { remote: true, id: "find_guest"}) do
-      .row
-        .large-12.columns
-          = label_tag(:email, "Email")
-          = email_field_tag(:email) 
+.box.transparent_white
+  .alert-box{"data-alert" => "This is an alert"}
+    / Your content goes here
+    %a.close{href: "#"} ×
+  %h3.articleSubTitle Enter your email to search for your RSVP
+  = form_tag({ controller: "wedding", action: "find_guest", method: "post" }, { remote: true, id: "find_guest"}) do
     .row
-      .large-12.columns
-        %button{type: "button", onclick: "javascript:$('form').first().submit()", :class => "medium button [radius round] center"} Find My RSVP
+      .large-4.columns &nbsp;
+      .large-4.columns
+        = email_field_tag(:email) 
+      .large-4.columns &nbsp;
+  .row
+    .large-12.columns
+      %button{type: "button", onclick: "javascript:$('form').first().submit()", :class => "medium button [radius round] center"} Find My RSVP
         

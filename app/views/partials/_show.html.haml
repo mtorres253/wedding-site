@@ -1,22 +1,17 @@
-.content
+
+.box.transparent_white
   -if @response.coming
-    %h2.articleTitle.textShadow
-      We can't wait to see you!
-    .box.transparent_white
-      %h3.articleSubTitle Here is your RSVP confirmation
-      .rsvp_inner_box
-        %p 
-          = rsvp_number_of_guests(@response)
-        %p 
-          = rsvp_friday_thingie(@response)
-        -if rsvp_comments(@response)
-          %p
-            = rsvp_comments(@response)
-        %p= link_to "Change my RSVP", "javascript:void();", {:class => "medium button [radius round]", :onclick => "$('#rsvp').html('#{escape_javascript(render :partial => 'partials/form')}');"}
+    %h3.articleSubTitle We can't wait to see you! Here is your RSVP confirmation
+    .rsvp_inner_box
+      %p 
+        = rsvp_number_of_guests(@response)
+      %p 
+        = rsvp_friday_thingie(@response)
+      -if rsvp_comments(@response)
+        %p
+          = rsvp_comments(@response)
   -else
-    %h2.articleTitle.textShadow
-      We'll Miss You :(
-    .box.transparent_white
-      %h3.articleSubTitle We're sorry you can't make it. Let us know if you change your mind :)
-      .rsvp_inner_box
-        %p= link_to "Change My RSVP", "javascript:void();", {:class => "medium button [radius round]", :onclick => "$('#rsvp').html('#{escape_javascript(render :partial => 'partials/form')}');"}
+    %h3.articleSubTitle We'll miss you! Let us know if you change your mind.
+    .rsvp_inner_box
+  %p= link_to "Change My RSVP", "javascript:void();", {:class => "medium button [radius round]", :onclick => "$('#rsvp_content').html('#{escape_javascript(render :partial => 'partials/form')}');"}
+  

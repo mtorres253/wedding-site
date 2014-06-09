@@ -1,59 +1,55 @@
-.content
-  %h2.articleTitle.textShadow
-    %span.yellow RSVP
-    Before 7/27/14
-  .box.transparent_white
-    %h3.articleSubTitle Let us know if you are coming and make sure to click the save button.
-    .rsvp_inner_box
+.box.transparent_white
+  %h3.articleSubTitle Let us know if you are coming and make sure to click the save button.
+  .rsvp_inner_box
+    .row
+      .large-1.columns &nbsp;
+      .large-5.columns
+        %button{type: "button", id: "coming-button", :class => coming_class(@response.coming)}
+          %i{:class => 'fa fa-check-square'} 
+          &nbsp; Yay, I'm Coming!
+      .large-5.columns
+        %button{type: "button", id: "not-coming-button", :class => not_coming_class(@response.coming)} 
+          %i{:class => 'fa fa-check-square'} 
+          &nbsp; Boo, I Can't Make It.
+      .large-1.columns &nbsp;
+    = form_for [:admin, @response], remote: true do |f|
+      - if @response.errors.any?
+        .row
+          .large-12.columns
+            #error_explanation
+              %h2
+                = pluralize(@response.errors.count, "error")
+                prohibited this response from being saved:
+              %ul
+                - @response.errors.full_messages.each do |msg|
+                  %li= msg
+      .row.hidden
+        .large-12.columns
+          = f.radio_button :coming, true, {placeholder: "large-2.columns"}
+          = f.radio_button :coming, false, {placeholder: "large-2.columns"}
       .row
-        .large-2.columns &nbsp;
-        .large-4.columns
-          %button{type: "button", id: "coming-button", :class => coming_class(@response.coming)}
-            %i{:class => 'fa fa-check-square'} 
-            &nbsp; Yay, I'm Coming!
-        .large-4.columns
-          %button{type: "button", id: "not-coming-button", :class => not_coming_class(@response.coming)} 
-            %i{:class => 'fa fa-check-square'} 
-            &nbsp; Boo, I Can't Make It.
-        .large-2.columns &nbsp;
-      = form_for [:admin, @response], remote: true do |f|
-        - if @response.errors.any?
-          .row
-            .large-12.columns
-              #error_explanation
-                %h2
-                  = pluralize(@response.errors.count, "error")
-                  prohibited this response from being saved:
-                %ul
-                  - @response.errors.full_messages.each do |msg|
-                    %li= msg
-        .row.hidden
-          .large-12.columns
-            = f.radio_button :coming, true, {placeholder: "large-2.columns"}
-            = f.radio_button :coming, false, {placeholder: "large-2.columns"}
-        .row
-          .large-2.columns &nbsp;
-          .large-2.columns
-            = f.label :adults
-            = f.select :adults, [1, 2], {placeholder: "large-2.columns"}
-          .large-2.columns
-            = f.label :children
-            = f.select :children, [0, 1, 2], {placeholder: "large-2.columns"}
-          .large-4.columns
-            = f.label :friday_reception
-            = f.select :friday_reception, [["I'm coming",true], ["I'm not coming", false]], {placeholder: "large-3.columns"}
-          .large-2.columns &nbsp;
-        .row
-          .large-2.columns &nbsp;
-          .large-8.columns
-            = f.label :comments
-            = f.text_area :comments
-            - if @guest
-              .field
-                = f.hidden_field :guest_id, :value => @guest.id
-          .large-2.columns &nbsp;
-        .row
-          .large-12.columns &nbsp;
-        .row
-          .large-12.columns
-            %button{type: "button", onclick: "javascript:$('form').first().submit()", :class => "medium button [radius round] center"} Save My RSVP
+        .large-1.columns &nbsp;
+        .large-2.columns
+          = f.label :adults
+          = f.select :adults, [1, 2], {placeholder: "large-2.columns"}
+        .large-2.columns
+          = f.label :children
+          = f.select :children, [0, 1, 2], {placeholder: "large-2.columns"}
+        .large-6.columns
+          = f.label :friday_reception
+          = f.select :friday_reception, [["I'm coming to the Friday event",true], ["I'm not coming to the Friday events", false]], {placeholder: "large-3.columns"}
+        .large-1.columns &nbsp;
+      .row
+        .large-1.columns &nbsp;
+        .large-10.columns
+          = f.label :comments
+          = f.text_area :comments
+          - if @guest
+            .field
+              = f.hidden_field :guest_id, :value => @guest.id
+        .large-1.columns &nbsp;
+      .row
+        .large-12.columns &nbsp;
+      .row
+        .large-12.columns
+          %button{type: "button", onclick: "javascript:$('form').first().submit()", :class => "medium button [radius round] center"} Save My RSVP

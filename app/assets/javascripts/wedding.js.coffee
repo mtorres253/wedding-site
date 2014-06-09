@@ -25,16 +25,16 @@ $(document).ready ->
 
 rsvp_setup = ->
   $("form").first().on("ajax:success", (e, data, status, xhr) ->
-    $("#rsvp").html xhr.responseText
+    $("#rsvp_content").html xhr.responseText
   ).on "ajax:error", (e, xhr, status, error) ->
-    $("#rsvp").append "<p>" + error + "</p>"
+    $("#rsvp_content").append "<p>" + error + "</p>"
   
   $("#coming-button").on "click", ->
     $('#response_coming_true').prop('checked', true);
-    $("#coming-button").switchClass "deselected", "selected", 1000, "easeInOutQuad"
-    $("#not-coming-button").switchClass "selected", "deselected", 1000, "easeInOutQuad"
+    $("#coming-button").switchClass "deselected", "selected", 10
+    $("#not-coming-button").switchClass "selected", "deselected", 10
   $("#not-coming-button").on "click", ->
     $('#response_coming_false').prop('checked', true);
-    $("#not-coming-button").switchClass "deselected", "selected", 1000, "easeInOutQuad"
-    $("#coming-button").switchClass "selected", "deselected", 1000, "easeInOutQuad"
+    $("#not-coming-button").switchClass "deselected", "selected", 10
+    $("#coming-button").switchClass "selected", "deselected", 10
   return
