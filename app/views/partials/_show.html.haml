@@ -13,5 +13,5 @@
   -else
     %h3.articleSubTitle We'll miss you! Let us know if you change your mind.
     .rsvp_inner_box
-  %p= link_to "Change My RSVP", "javascript:void();", {:class => "medium button [radius round]", :onclick => "$('#rsvp_content').html('#{escape_javascript(render :partial => 'partials/form')}');"}
+  %p= link_to "Change My RSVP", "javascript:void();", {:class => "large button [radius round]", :onclick => "$('#rsvp_content').html('#{escape_javascript(render :partial => 'partials/form')}');"}
   
