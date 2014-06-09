@@ -19,7 +19,7 @@ module WeddingHelper
     @adult_copy = response.adults > 1 ? "adults" : "adult"
     @child_copy = response.children > 1 ? "children" : "child"
     @copy_number_of_guests = "I'm bringing"
-    @copy_number_of_guests += " #{response.adults}"
+    @copy_number_of_guests += " #{response.adults} "
     @copy_number_of_guests += @adult_copy
     @copy_number_of_guests += response.children > 0 ? " and #{response.children} #{@child_copy}" : ""
     return @copy_number_of_guests
