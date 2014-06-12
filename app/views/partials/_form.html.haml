@@ -5,11 +5,11 @@
       .large-1.columns &nbsp;
       .large-5.columns
         %button{type: "button", id: "coming-button", :class => coming_class(@response.coming)}
-          %i{:class => 'fa fa-smile-o'} 
+          %i{:class => 'fa fa-smile-o fa-lg'} 
           &nbsp; Yay, I'm Coming!
       .large-5.columns
         %button{type: "button", id: "not-coming-button", :class => not_coming_class(@response.coming)} 
-          %i{:class => 'fa fa-frown-o'} 
+          %i{:class => 'fa fa-frown-o fa-lg'} 
           &nbsp; Boo, I Can't Make It.
       .large-1.columns &nbsp;
     = form_for [:admin, @response], remote: true do |f|

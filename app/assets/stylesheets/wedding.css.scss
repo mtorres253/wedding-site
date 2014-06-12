@@ -102,6 +102,7 @@ p {
   height: 750px;
   background: url("pink-glitter-bg.jpg") 50% 0 repeat;
   .box {
+    background: url("k-s_glitter_curtain.png");
     background-color:rgba(255,255,255,0.85);
   }
 }
@@ -201,4 +202,24 @@ form {
 .right {
 	align: right;
 	display: block;
+}
+
+.top-bar {
+  background: inherit;
+}
+
+.top-bar-section li:not(.has-form) {
+  a:not(.button) {
+    background: inherit;
+  }
+}
+
+.top-bar-section ul {
+  background: inherit;
+}
+
+.top-bar-section ul li {
+  a:hover {
+    background:scale-color(#ffffff, $lightness: -50%);;
+  }
 }
