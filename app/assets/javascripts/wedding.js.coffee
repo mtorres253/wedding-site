@@ -31,7 +31,7 @@ rsvp_setup = ->
     $(".alert-box").show()
 
   $("#rsvp_button").on "click", ->
-    form.submit()
+    submit_form(form, this)
 
   $("#coming-button").on "click", ->
     $('#response_coming_true').prop('checked', true);
@@ -73,3 +73,9 @@ scrollHandler = ->
     , 0
 
   return
+  
+submit_form  = (form, button) ->
+  if $(button).attr("disabled") != "disabled"
+    $(button).attr("disabled", true)
+    form.submit()
+  
