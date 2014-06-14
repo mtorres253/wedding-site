@@ -15,7 +15,7 @@ class WeddingController < ApplicationController
 
     respond_to do |format|
       if !@guest.nil?
-        @response = !@guest.response.blank? ? @guest.response : Response.new
+        @response = @guest.response.blank? ? Response.new : @guest.response
         format.html { render partial: 'partials/form', notice: 'We Found You!' }
         format.json { render json: @response.errors, status: :unprocessable_entity }
       else

@@ -47,7 +47,7 @@
         .large-10.columns
           = f.label :comments
           = f.text_area :comments
-          - if @guest
+          - if !@guest.nil?
             .field
               = f.hidden_field :guest_id, :value => @guest.id
         .large-1.columns &nbsp;

@@ -4,6 +4,7 @@
     %thead
       %tr
         %th Guest Name
+        %th Guest ID
         %th Coming?
         %th Adults Attending
         %th Children Attending
@@ -16,6 +17,7 @@
       - @responses.each do |response|
         %tr
           %td= response.guest.name
+          %td= response.guest_id
           %td= response.coming
           %td= response.adults
           %td= response.children
