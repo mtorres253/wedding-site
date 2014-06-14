@@ -1,4 +1,7 @@
 .box.transparent_white
+  .alert-box.hide{"data-alert" => "This is an alert"}
+    / Your content goes here
+    %a.close{href: "#"} ×
   %h3.articleSubTitle Let us know if you are coming and make sure to click the save button.
   .rsvp_inner_box
     .row
@@ -52,4 +55,4 @@
         .large-12.columns &nbsp;
       .row
         .large-12.columns
-          %button{type: "button", onclick: "javascript:$('form').first().submit()", :class => "large button [radius round] center"} Save My RSVP
+          %button{type: "button", id: "rsvp_button", :class => "large button [radius round] center"} Save my RSVP

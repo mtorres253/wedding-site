@@ -8,10 +8,11 @@ $(document).ready ->
       , 1000
     return
   scrollHandler()
+  
   $(window).on "scroll", ->
     window.requestAnimationFrame scrollHandler
     return
-  
+    
   rsvp_setup()
   # For FF and Chrome
   $("#rsvp").bind "DOMSubtreeModified", rsvp_setup
@@ -21,19 +22,26 @@ $(document).ready ->
   return
 
 rsvp_setup = ->
-  $("form").first().on("ajax:success", (e, data, status, xhr) ->
+  form = $("form").first()
+    
+  form.on("ajax:success", (e, data, status, xhr) ->
     $("#rsvp_content").html xhr.responseText
   ).on "ajax:error", (e, xhr, status, error) ->
-    $("#rsvp_content").append "<p>" + error + "</p>"
-  
+    $(".alert-box").append "<p>" + error + "</p>"
+    $(".alert-box").show()
+
+  $("#rsvp_button").on "click", ->
+    form.submit()
+
   $("#coming-button").on "click", ->
     $('#response_coming_true').prop('checked', true);
-    $("#coming-button").switchClass "deselected", "selected", 10
-    $("#not-coming-button").switchClass "selected", "deselected", 10
+    $("#coming-button").removeClass("deselected").addClass "selected"
+    $("#not-coming-button").removeClass("selected").addClass "deselected"
   $("#not-coming-button").on "click", ->
     $('#response_coming_false').prop('checked', true);
-    $("#not-coming-button").switchClass "deselected", "selected", 10
-    $("#coming-button").switchClass "selected", "deselected", 10
+    $("#not-coming-button").removeClass("deselected").addClass "selected"
+    $("#coming-button").removeClass("selected").addClass "deselected"
+
   return
 
 
@@ -41,7 +49,7 @@ scrollHandler = ->
   obj = $("#topbar")
   if (window.scrollY >= 0) and (window.scrollY <= $("#schedule").offset().top - 46)
     obj.animate
-      backgroundColor: "#995C00"
+      backgroundColor: "#663300"
     , 0
     
   if (window.scrollY > $("#schedule").offset().top - 46) and (window.scrollY <= $("#directions").offset().top - 46)
@@ -56,12 +64,12 @@ scrollHandler = ->
 
   if (window.scrollY > $("#registry").offset().top - 46) and (window.scrollY <= $("#rsvp").offset().top - 46)
     obj.animate
-      backgroundColor: "#660033"
+      backgroundColor: "#800000"
     , 0
     
   if (window.scrollY > $("#rsvp").offset().top - 46)
     obj.animate
-      backgroundColor: "#00007A"
+      backgroundColor: "#00005C"
     , 0
 
   return

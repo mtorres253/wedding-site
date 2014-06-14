@@ -14,13 +14,12 @@ class WeddingController < ApplicationController
     @guest = Guest.find_by_email("#{@email}")
 
     respond_to do |format|
-      if @guest.id
+      if !@guest.nil?
         @response = !@guest.response.blank? ? @guest.response : Response.new
-        
-        format.html { render partial: 'partials/form', notice: 'Sorry, we could not find your email address' }
+        format.html { render partial: 'partials/form', notice: 'We Found You!' }
         format.json { render json: @response.errors, status: :unprocessable_entity }
       else
-        format.html { render partial: 'partials/default', notice: 'We found you!' }
+        format.html { render partial: 'partials/default', locals: { alert: "We're sorry, we can't find your email address. Please try again." } }
         format.json { head :no_content }
       end
     end

@@ -1,5 +1,8 @@
 
 .box.transparent_white
+  .alert-box.hide{"data-alert" => "This is an alert"}
+    / Your content goes here
+    %a.close{href: "#"} ×
   -if @response.coming
     %h3.articleSubTitle We can't wait to see you! Here is your RSVP confirmation
     .rsvp_inner_box
