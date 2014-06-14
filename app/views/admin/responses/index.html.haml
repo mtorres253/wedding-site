@@ -9,6 +9,8 @@
         %th Children Attending
         %th Friday Reception
         %th Comments
+        %th Created
+        %th Updated
         %th Actions
     %tbody
       - @responses.each do |response|
@@ -19,6 +21,8 @@
           %td= response.children
           %td= response.friday_reception
           %td= response.comments
+          %td= response.created_at
+          %td= response.updated_at
           %td
             = link_to 'Show', admin_response_path(response)
             |
