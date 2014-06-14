@@ -25,13 +25,19 @@
 %section#home{"data-speed" => "2", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
-      - if @guest.blank?
-        You Are Invited
-      - else
-        #{@guest.name}, You Are Invited
+      %span.clip-me
+        - if @guest.blank?
+          You Are Invited
+        - else
+          #{@guest.name}, You Are Invited
     .box.transparent_white
-      %h3.articleSubTitle To David and Michael's Wedding
-      =image_tag "davidandmichael.jpg"
+      .row
+        .large-6.columns
+          =image_tag "davidandmichael.jpg"
+        .large-6.columns
+          %h3.articleSubTitle.left-align To David and Michael's Wedding
+          %p.left-align We started on this expedition almost 19 years ago and on September 27th we're making a stop to celebrate. 
+          %p.left-align We are so grateful to have all of you in our lives and would be honored if you’d join us in celebration of the life we’ve created together and the journey ahead.
 %section#schedule.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     %h2.articleTitle.textShadow
@@ -39,7 +45,9 @@
     .box.transparent_white
       %ul.small-block-grid-3
         %li
-          %h3.articleSubTitle Friday 9/26/14
+          %h3.articleSubTitle Don't be tardy for the party
+          %h4.date Friday, 9/26/14
+          %p David’s parents, Gary Olem And Michele Riu Olem invite you to join them for a reception at the Redwood Grove at Samuel Taylor State Park, from 4:00 PM to 7:00 PM.
         %li
           %h3.articleSubTitle Saturday 9/27/14
         %li

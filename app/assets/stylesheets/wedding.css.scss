@@ -28,6 +28,15 @@
 @media #{$xxlarge-up} { }
 @media #{$xxlarge-only} { }
 
+span.clip-me {
+  font-family: 'Wellfleet', cursive;
+	-webkit-mask-image: url("WatercolorTutorial_PaperTexture.png");
+	-o-mask-image: url("WatercolorTutorial_PaperTexture.png");
+	-moz-mask-image: url("WatercolorTutorial_PaperTexture.png");
+	mask-image:  url("WatercolorTutorial_PaperTexture.png");
+}
+
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 20px;
@@ -148,7 +157,7 @@ p {
 }
 
 .articleSubTitle {
-  font-family: 'Armata', cursive;
+  font-family: 'Wellfleet', cursive;
   font-size: 1.3em;
   line-height: 1em;
   color: #333;
@@ -226,4 +235,13 @@ form {
   a:hover {
     background:scale-color(#ffffff, $lightness: -50%);;
   }
+}
+
+.left-align {
+  text-align: left;
+}
+
+.date {
+  font-size: 12px;
+  font-weight: 900;
 }
