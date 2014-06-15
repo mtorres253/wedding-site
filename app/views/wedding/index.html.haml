@@ -1,4 +1,4 @@
-#topbar.contain-to-grid.sticky{:style => "-webkit-backface-visibility: hidden;"}
+#topbar.contain-to-grid.sticky
   %nav.top-bar{"data-topbar" => ""}
     %ul.title-area
       %li.name
@@ -46,11 +46,15 @@
     .box.transparent_white
       .row
         .large-6.columns
-          %h3.articleSubTitle Friday Evening, 9/26/14
+          %h3.articleSubTitle
+            %i{:class => "fa fa-moon-o"}
+            = "Friday Evening, 9/26/14"
           %h3.subhead Don't be Tardy for the Party
           %p.left-align David’s parents, Gary Olem And Michele Riu Olem invite you to join them for a reception at the Redwood Grove at Samuel Taylor State Park from 4:00 PM to 7:00 PM.
         .large-6.columns
-          %h3.articleSubTitle Saturday Afternoon, 9/27/14
+          %h3.articleSubTitle
+            %i{:class => "fa fa-sun-o"}
+            = "Saturday Afternoon, 9/27/14"
           %h3.subhead Be Punctual for the Nuptials
           %p.left-align A short ceremony will take place at 3:00 PM on the lawn behind the Lodge. It will be followed by a cocktail hour and then a buffet dinner from 4:30 PM to 7:30PM.
       .row
@@ -58,11 +62,15 @@
           %p &nbsp;
       .row
         .large-6.columns
-          %h3.articleSubTitle Saturday Night, 9/27/14
+          %h3.articleSubTitle
+            %i{:class => "fa fa-moon-o"}
+            = "Saturday Night, 9/27/14"
           %h3.subhead It’d Be Great if You Stay Late
           %p.left-align Come on over to The Farmhouse next door and dance from 8:00 PM ‘til midnight.
         .large-6.columns
-          %h3.articleSubTitle Sunday Morning, 9/27/14
+          %h3.articleSubTitle 
+            %i{:class => "fa fa-sun-o"}
+            = "Sunday Morning, 9/27/14"
           %h3.subhead Feel Free to Come Get Some Tea
           %p.left-align 
             = "We will be meeting up at the " 
@@ -115,9 +123,6 @@
             %h3.articleSubTitle Childcare
           .row
             %h3.articleSubTitle Gift Registry
-            
-
-
 %section#rsvp.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
     %h2.articleTitle RSVP by 7/27/14
