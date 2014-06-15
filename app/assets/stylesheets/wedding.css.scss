@@ -28,14 +28,6 @@
 @media #{$xxlarge-up} { }
 @media #{$xxlarge-only} { }
 
-span.clip-me {
-  font-family: 'Wellfleet', cursive;
-	-webkit-mask-image: url("WatercolorTutorial_PaperTexture.png");
-	-o-mask-image: url("WatercolorTutorial_PaperTexture.png");
-	-moz-mask-image: url("WatercolorTutorial_PaperTexture.png");
-	mask-image:  url("WatercolorTutorial_PaperTexture.png");
-}
-
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -81,6 +73,9 @@ p {
   .box {
     background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
     background-color:rgba(255,255,255,0.85);
+  }
+  h3 {
+    color: #00005C;
   }
 }
 
@@ -151,8 +146,11 @@ p {
   font-size: 4em;
   line-height: 1em;
   color: #FFFFFF;
-  .yellow {
-//    color: #FFFF66;
+  .clip-me {
+  	-webkit-mask-image: url("WatercolorTutorial_PaperTexture.png");
+  	-o-mask-image: url("WatercolorTutorial_PaperTexture.png");
+  	-moz-mask-image: url("WatercolorTutorial_PaperTexture.png");
+  	mask-image:  url("WatercolorTutorial_PaperTexture.png");
   }
 }
 
@@ -233,7 +231,7 @@ form {
 
 .top-bar-section ul li {
   a:hover {
-    background:scale-color(#ffffff, $lightness: -50%);;
+    background:scale-color(#ffffff, $lightness: -50%);
   }
 }
 
@@ -242,6 +240,6 @@ form {
 }
 
 .date {
-  font-size: 12px;
-  font-weight: 900;
+  font-size: 1em;
+  font-weight: 500;
 }
