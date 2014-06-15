@@ -9,6 +9,8 @@
 
 @import url(http://fonts.googleapis.com/css?family=Armata);
 
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans);
+
 @import "foundation/components/buttons";
 
 @import "font-awesome";
@@ -27,6 +29,13 @@
 
 @media #{$xxlarge-up} { }
 @media #{$xxlarge-only} { }
+
+$subheader-color-schedule: #00005C;
+$subheader-color-home: #663300;
+$subheader-color-directions: #003300;
+$subheader-color-registry: #800000;
+$subheader-color-rsvp: #00005C;
+
 
 
 body {
@@ -51,15 +60,19 @@ p {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
+.subhead {
+  font-size: 1em;
+  font-weight: 500;
+}
+
 #home {
   position: relative;
   margin: 45,auto;
   width: 100%;
   height: 750px;
   background: url("point-reyes-sunset-bg.jpg") 20% 40% repeat fixed;
-  .box {
-    background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
-    background-color:rgba(255,255,255,0.85);
+  h3 {
+    color: $subheader-color-home;
   }
 }
 
@@ -68,14 +81,13 @@ p {
   margin: 0 auto;
   width: 100%;
   height: 750px;
-  // background: url("http://www.w8themes.com/wp-content/uploads/2013/08/Black-Glitter-Wallpaper.png") 50% 0 repeat;
 	background: url("blue-glitter-bg.jpg") 50% 0 repeat;
-  .box {
-    background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
-    background-color:rgba(255,255,255,0.85);
-  }
   h3 {
-    color: #00005C;
+    color: $subheader-color-schedule;
+  }
+  p {
+    width: 85%;
+    margin: auto;
   }
 }
 
@@ -85,9 +97,8 @@ p {
   width: 100%;
   height: 750px;
 	background: url("redwood-forest-bg.jpg") 50% 0 repeat fixed;  
-  .box {
-    background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
-    background-color:rgba(255,255,255,0.85);
+  h3 {
+    color: $subheader-color-directions;
   }
 }
 
@@ -97,9 +108,8 @@ p {
   width: 100%;
   height: 750px;
 	background: url("path-to-lighthouse-bg.jpg") 10% 50% repeat fixed;
-  .box {
-    background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
-    background-color:rgba(255,255,255,0.85);
+  h3 {
+    color: $subheader-color-rsvp;
   }
 }
 
@@ -109,9 +119,8 @@ p {
   width: 100%;
   height: 750px;
   background: url("pink-glitter-bg.jpg") 50% 0 repeat;
-  .box {
-    background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
-    background-color:rgba(255,255,255,0.85);
+  h3 {
+    color: $subheader-color-registry;
   }
 }
 
@@ -125,6 +134,8 @@ p {
 }
 
 .box {
+  background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
+  background-color:rgba(255,255,255,0.85);
   position: relative;
   top: 10px;
   padding: 30px;
@@ -155,7 +166,8 @@ p {
 }
 
 .articleSubTitle {
-  font-family: 'Wellfleet', cursive;
+  font-family: 'Fira Sans';
+  font-weight: 700;
   font-size: 1.3em;
   line-height: 1em;
   color: #333;
@@ -215,6 +227,17 @@ form {
 	display: block;
 }
 
+.left-align {
+  text-align: left;
+}
+
+.date {
+  font-size: 1em;
+  font-weight: 500;
+}
+
+// foundation style overrides
+
 .top-bar {
   background: inherit;
 }
@@ -233,13 +256,4 @@ form {
   a:hover {
     background:scale-color(#ffffff, $lightness: -50%);
   }
-}
-
-.left-align {
-  text-align: left;
-}
-
-.date {
-  font-size: 1em;
-  font-weight: 500;
 }

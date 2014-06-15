@@ -4,7 +4,6 @@
     %thead
       %tr
         %th Guest Name
-        %th Guest ID
         %th Coming?
         %th Adults Attending
         %th Children Attending
@@ -17,14 +16,13 @@
       - @responses.each do |response|
         %tr
           %td= response.guest.name
-          %td= response.guest_id
           %td= response.coming
           %td= response.adults
           %td= response.children
           %td= response.friday_reception
           %td= response.comments
-          %td= response.created_at
-          %td= response.updated_at
+          %td= "#{time_ago_in_words(response.created_at)} ago"
+          %td= "#{time_ago_in_words(response.updated_at)} ago"
           %td
             = link_to 'Show', admin_response_path(response)
             |
