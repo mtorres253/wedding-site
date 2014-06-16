@@ -134,7 +134,8 @@
           = render 'partials/form'
       - else
         = render 'partials/default'
-          
-      
-        
-      
+
+- if @guest && @guest.departure_city
+  %section#animation-map{'data-origin' => @guest.departure_city}
+  :javascript
+    window.animationMap = new WS.AnimationMap('animation-map').init();
