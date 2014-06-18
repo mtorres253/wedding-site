@@ -33,4 +33,8 @@ module WeddingHelper
     @copy_comments = response.comments? ? "And I've got something to say: #{response.comments}" : nil
   end
   
+  def guest_name guest
+    @guest.name
+  end
+  
 end

@@ -65,14 +65,21 @@ p {
   font-weight: 500;
 }
 
+.yellow {
+  color: #ffcc00;
+}
+
 #home {
   position: relative;
   margin: 45,auto;
   width: 100%;
   height: 750px;
   background: url("point-reyes-sunset-bg.jpg") 20% 40% repeat fixed;
-  h3 {
+  h3, h2 {
     color: $subheader-color-home;
+  }
+  .copy {
+    margin-top: 5px;
   }
 }
 
@@ -82,12 +89,8 @@ p {
   width: 100%;
   height: 750px;
 	background: url("blue-glitter-bg.jpg") 50% 0 repeat;
-  h3 {
+  h3, h2 {
     color: $subheader-color-schedule;
-  }
-  p {
-    width: 85%;
-    margin: auto;
   }
 }
 
@@ -97,7 +100,7 @@ p {
   width: 100%;
   height: 750px;
 	background: url("redwood-forest-bg.jpg") 50% 0 repeat fixed;  
-  h3 {
+  h3, h2 {
     color: $subheader-color-directions;
   }
 }
@@ -108,7 +111,7 @@ p {
   width: 100%;
   height: 750px;
 	background: url("path-to-lighthouse-bg.jpg") 10% 50% repeat fixed;
-  h3 {
+  h3, h2 {
     color: $subheader-color-rsvp;
   }
 }
@@ -119,7 +122,7 @@ p {
   width: 100%;
   height: 750px;
   background: url("pink-glitter-bg.jpg") 50% 0 repeat;
-  h3 {
+  h3, h2 {
     color: $subheader-color-registry;
   }
 }
@@ -134,13 +137,13 @@ p {
 }
 
 .box {
-  background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
-  background-color:rgba(255,255,255,0.85);
+//  background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
+  background-color:rgba(255,255,255,0.90);
   position: relative;
   top: 10px;
   padding: 30px;
 	margin: auto;
-	width: 85%;
+	width: 90%;
   text-align: center;
 }
 
@@ -151,18 +154,19 @@ p {
 //	border: 10px solid #9900CC;
 }
 
+.articleSuperTitle {
+  margin-bottom: 0.25em;
+  font-family: 'Wellfleet', cursive;
+  font-size: 2em;
+  line-height: 1em;
+  color: $subheader-color-home;
+}
+
 .articleTitle {
   margin-bottom: 0.25em;
   font-family: 'Wellfleet', cursive;
-  font-size: 4em;
+  font-size: 3.5em;
   line-height: 1em;
-  color: #FFFFFF;
-  .clip-me {
-  	-webkit-mask-image: url("WatercolorTutorial_PaperTexture.png");
-  	-o-mask-image: url("WatercolorTutorial_PaperTexture.png");
-  	-moz-mask-image: url("WatercolorTutorial_PaperTexture.png");
-  	mask-image:  url("WatercolorTutorial_PaperTexture.png");
-  }
 }
 
 .articleSubTitle {
@@ -259,6 +263,13 @@ form {
 }
 
 #animation-map {
-  height: 400px;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 750px;
   cursor: default;
+  h3 {
+    color: $subheader-color-registry;
+  }
 }
+

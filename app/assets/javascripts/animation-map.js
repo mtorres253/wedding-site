@@ -47,6 +47,7 @@ WS.AnimationMap = function(elem) {
 
       self.originCoords      = [json.geometry.location.lat, json.geometry.location.lng];
       self.destinationCoords = DESTINATION_COORDS;
+      // self.slope (json.geometry.location.lat - 38.04)/(json.geometry.location.lng + 122.79);
 
       dfr.resolve();
     }).fail(function(data) {
@@ -105,6 +106,7 @@ WS.AnimationMap = function(elem) {
     self.vehicleIcon = new L.icon({
       iconUrl: '/assets/images/' + vehicle + '-24.png',
       iconSize: [24, 24],
+      // iconAngle: slope,
       shadowUrl: null
     });
   };

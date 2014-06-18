@@ -45,7 +45,7 @@ class Admin::GuestsController < AdminController
   def update
     respond_to do |format|
       if @guest.update(guest_params)
-        format.html { redirect_to @guest, notice: 'Guest was successfully updated.' }
+        format.html { redirect_to [:admin, @guest], notice: 'Guest was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
