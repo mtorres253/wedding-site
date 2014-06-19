@@ -37,7 +37,6 @@ $subheader-color-registry: #800000;
 $subheader-color-rsvp: #00005C;
 
 
-
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 20px;
@@ -138,7 +137,7 @@ p {
 
 .box {
 //  background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
-  background-color:rgba(255,255,255,0.90);
+  background-color:rgba(255,255,255,0.95);
   position: relative;
   top: 10px;
   padding: 30px;
@@ -181,11 +180,12 @@ p {
 	cursor: hand;
 }
 
+.hidden {
+	display: none;
+}
+
 form {
 	text-align: left;
-	.hidden {
-		display: none;
-	}
 }
 
 .selected { 
@@ -271,5 +271,11 @@ form {
   h3 {
     color: $subheader-color-registry;
   }
+}
+
+.icon {
+  margin: 0px;
+  padding: 0px;
+  line-height: 1em;
 }
 

@@ -27,8 +27,9 @@
     .box.transparent_white
       .row
         .large-12.columns
-          %h3.articleSuperTitle 
-            = guest_name(@guest)
+          -if !@guest.blank?
+            %h3.articleSuperTitle 
+              = @guest.name
           %h2.articleTitle You Are Invited 
       .row
         .large-12.columns &nbsp;
@@ -53,7 +54,7 @@
         .large-12.columns &nbsp;
       .row
         .large-1.columns
-          %h3.right
+          %h3.right.icon
             %i{:class => "fa fa-moon-o"}
         .large-5.columns
           %h3.articleSubTitle.left-align
@@ -61,7 +62,7 @@
           %h3.subhead.left-align Don't be Tardy for the Party &hellip; 
           %p.left-align David’s parents, Gary Olem And Michele Riu Olem invite you to join them for a reception at the Redwood Grove at Samuel Taylor State Park from 4:00 PM to 7:00 PM.
         .large-1.columns 
-          %h3.right
+          %h3.right.icon
             %i{:class => "fa fa-sun-o yellow"}
         .large-5.columns
           %h3.articleSubTitle.left-align
@@ -72,7 +73,7 @@
         .large-12.columns &nbsp;
       .row
         .large-1.columns
-          %h3.right
+          %h3.right.icon
             %i{:class => "fa fa-moon-o"}
         .large-5.columns
           %h3.articleSubTitle.left-align
@@ -80,7 +81,7 @@
           %h3.subhead.left-align It’d Be Great if You Stay Late &hellip; 
           %p.left-align Come on over to The Farmhouse next door and dance from 8:00 PM ‘til midnight.
         .large-1.columns
-          %h3.right
+          %h3.right.icon
             %i{:class => "fa fa-sun-o yellow"}
         .large-5.columns
           %h3.articleSubTitle.left-align 
@@ -143,11 +144,14 @@
             = link_to "Olema Campground", "http://www.olemacampground.net/location-and-directions.html", {:target => "_blank"}
         .large-6.columns
           %h3.articleSubTitle.left-align Childcare
-          %p.left-align Papermill Creek Children’s Corner 415-663-9114
+          %p.left-align Papermill Creek Children’s Corner (415-663-9114)
           %h3.articleSubTitle.left-align Transportation
           %p.left-align 
             = link_to "Marin door to door (415-457-2717)", "www.marindoortodoor.com", {:target => "_blank"}
-          %h3.articleSubTitle.left-align Gift Registry
+          %h3.articleSubTitle.left-align Honeymoon Registry
+          %p.left-align
+            = link_to "Backroads Travel Company", "www.backroads.com", {:target => "_blank"}
+
 %section#rsvp.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
     #rsvp_content

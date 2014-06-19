@@ -37,10 +37,12 @@ rsvp_setup = ->
     $('#response_coming_true').prop('checked', true);
     $("#coming-button").removeClass("deselected").addClass "selected"
     $("#not-coming-button").removeClass("selected").addClass "deselected"
+    $('#form_container').prop('class', "")
   $("#not-coming-button").on "click", ->
     $('#response_coming_false').prop('checked', true);
     $("#not-coming-button").removeClass("deselected").addClass "selected"
     $("#coming-button").removeClass("selected").addClass "deselected"
+    $('#form_container').prop('class', "hidden")
 
   return
 
