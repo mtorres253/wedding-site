@@ -104,14 +104,17 @@
         .large-12.columns &nbsp;
       .row
         .large-4.columns
+          %h3.subhead Samuel P Taylor Redwood Grove
           %iframe{height: "300", src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kLp3uxn0B4i0", width: "95%"}
-          %p.left-align The Samuel P Taylor redwood grove is a short drive from Olema on Sir Francis Drake. 
+          %p.left-align.note The Samuel P Taylor redwood grove is a short drive from Olema on Sir Francis Drake. 
         .large-4.columns
+          %h3.subhead Point Reyes Seashore Lodge
           %iframe{height: "300", src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kwIfxax1grNE", width: "95%"}
-          %p.left-align The Point Reyes Seashore Lodge is at the intersection of Sir Francis Drake and Highway 1
+          %p.left-align.note The Point Reyes Seashore Lodge is at the intersection of Sir Francis Drake and Highway 1
         .large-4.columns
+          %h3.subhead Station House Cafe
           %iframe{height: "300", src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kZpBxZo4JOwc", width: "95%"}
-          %p.left-align The Station House Cafe is located in Point Reyes Station, just a short drive up Highway 1 from Olema
+          %p.left-align.note The Station House Cafe is located in Point Reyes Station, just a short drive up Highway 1 from Olema
 %section#registry.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     .box.transparent_white
@@ -121,11 +124,12 @@
       .row
         .large-12.columns &nbsp;
       .row
-        .large-6.columns
-          %h3.articleSubTitle.left-align Accommodations
-          %p.left-align 
+        .large-1.columns &nbsp;
+        .large-5.columns
+          %h3.subhead.left-align Accommodations
+          %p.left-align.nomargin
             = link_to "The Point Reyes Seashore Lodge", "http://www.pointreyesseashore.com", {:target => "_blank"}
-            %br
+          %p.left-align.note
             %i Reservations by phone only: 415-663-9000
           %p.left-align
             = link_to "Roundstone Farm", "http://www.roundstonefarm.com", {:target => "_blank"}
@@ -135,22 +139,27 @@
             = link_to "The Bear Inn", "http://www.bearvinn.com", {:target => "_blank"}
           %p.left-align
             = link_to "Olema Cottages", "http://vacationrentalspointreyes.com", {:target => "_blank"}
-          %p.left-align
+          %p.left-align.nomargin
             = link_to "The Tomales Bay Resort", "http://www.tomalesbayresort.com", {:target => "_blank"}
-            %br
+          %p.left-align.note
             %i This hotel is a 10 minute drive from Olema but only has a one night minumum
-          %h3.articleSubTitle.left-align Camping
+
+        .large-5.columns          
+          %h3.subhead.left-align Camping
           %p.left-align
             = link_to "Olema Campground", "http://www.olemacampground.net/location-and-directions.html", {:target => "_blank"}
-        .large-6.columns
-          %h3.articleSubTitle.left-align Childcare
-          %p.left-align Papermill Creek Children’s Corner (415-663-9114)
-          %h3.articleSubTitle.left-align Transportation
+          %h3.subhead.left-align Childcare
+          %p.left-align 
+            = link_to "Papermill Creek Children’s Corner (415-663-9114)", "http://www.yelp.com/biz/papermill-creek-childrens-corner-point-reyes-station"
+          %h3.subhead.left-align Transportation
           %p.left-align 
             = link_to "Marin door to door (415-457-2717)", "www.marindoortodoor.com", {:target => "_blank"}
-          %h3.articleSubTitle.left-align Honeymoon Registry
+          %h3.subhead.left-align Honeymoon Registry
           %p.left-align
             = link_to "Backroads Travel Company", "www.backroads.com", {:target => "_blank"}
+        .large-1.columns &nbsp;
+      .row
+        .large-12.columns &nbsp;
 
 %section#rsvp.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
@@ -165,5 +174,7 @@
 
 - if @guest && @guest.departure_city
   %section#animation-map{'data-origin' => @guest.departure_city}
+    %h2.articleTitle{:style => "position: absolute; top: 20px; text-align: center; z-index: 10; width: 100%"} 
+      = "Have a nice trip!"
   :javascript
     window.animationMap = new WS.AnimationMap('animation-map').init();
