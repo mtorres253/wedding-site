@@ -11,24 +11,11 @@
 
 @import url(http://fonts.googleapis.com/css?family=Fira+Sans);
 
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
+
 @import "foundation/components/buttons";
 
 @import "font-awesome";
-
-@media #{$small-up} { }
-@media #{$small-only} { }
-
-@media #{$medium-up} { }
-@media #{$medium-only} { }
-
-@media #{$large-up} { }
-@media #{$large-only} { }
-
-@media #{$xlarge-up} { }
-@media #{$xlarge-only} { }
-
-@media #{$xxlarge-up} { }
-@media #{$xxlarge-only} { }
 
 $subheader-color-schedule: #00005C;
 $subheader-color-home: #663300;
@@ -38,10 +25,10 @@ $subheader-color-rsvp: #00005C;
 
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arvo', serif;
   line-height: 20px;
   font-weight: 300;
-	color: #000;
+	color: #333;
 	margin: 0;
 	padding: 0;
 }
@@ -79,6 +66,10 @@ p {
   }
   .copy {
     margin-top: 5px;
+  }
+  .home_message {
+    padding-top: 15px;
+    padding-bottom: 35px;
   }
 }
 
@@ -136,7 +127,7 @@ p {
 }
 
 .box {
-//  background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
+//  background: url("black-dot-texture_025959.png") 0 0 repeat;
   background-color:rgba(255,255,255,0.95);
   position: relative;
   top: 10px;
@@ -279,3 +270,46 @@ form {
   line-height: 1em;
 }
 
+.float_right {
+  float: right;
+}
+
+@media #{$small-up} { 
+  #home {
+    height: 850px;
+    .home_message {
+      padding-top: 0px;
+      padding-bottom: 15px;
+    }
+    .copy {
+      padding-top: 15px;
+    }
+  }
+}
+@media #{$small-only} { }
+
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { 
+  .box {
+    min-width:1000px;
+  }
+  #home {
+    height: 850px;
+    .home_message {
+      padding-top: 0px;
+      padding-bottom: 15px;
+    }
+    .copy {
+      padding-top: 0px;
+    }
+  }
+}
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }

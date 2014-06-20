@@ -22,7 +22,9 @@
               %i{:class => 'fa fa-frown-o fa-lg'} 
               &nbsp; Boo, I Can't Make It.
           .large-1.columns &nbsp;
-        #form_container
+        #not_coming_message{:class => not_coming_message_class(@response.coming)}
+          %p We're sorry you can't make it! Make sure to save your RSVP anyway.
+        #form_container{:class => form_container_class(@response.coming)}
           = form_for [:admin, @response], remote: true do |f|
             - if @response.errors.any?
               .row

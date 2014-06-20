@@ -7,6 +7,7 @@ $(document).ready ->
       scrollTop: parseInt($("#" + @name).offset().top - 45)
       , 1000
     return
+    
   scrollHandler()
   
   $(window).on "scroll", ->
@@ -38,11 +39,13 @@ rsvp_setup = ->
     $("#coming-button").removeClass("deselected").addClass "selected"
     $("#not-coming-button").removeClass("selected").addClass "deselected"
     $('#form_container').prop('class', "")
+    $('#not_coming_message').prop('class', "hidden")
   $("#not-coming-button").on "click", ->
     $('#response_coming_false').prop('checked', true);
     $("#not-coming-button").removeClass("deselected").addClass "selected"
     $("#coming-button").removeClass("selected").addClass "deselected"
     $('#form_container').prop('class', "hidden")
+    $('#not_coming_message').prop('class', "")
 
   return
 

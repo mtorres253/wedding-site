@@ -15,6 +15,22 @@ module WeddingHelper
     end
   end
   
+  def form_container_class coming
+    if coming == false
+      'hidden'
+    else
+      ''
+    end
+  end
+  
+  def not_coming_message_class coming
+    if coming == false
+      ''
+    else
+      'hidden'
+    end
+  end
+  
   def rsvp_number_of_guests response
     @adult_copy = response.adults > 1 ? "adults" : "adult"
     @child_copy = response.children > 1 ? "children" : "child"
