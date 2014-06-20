@@ -6,11 +6,11 @@
     .large-12.columns &nbsp;
   .row
     .large-12.columns
-      %h3.articleSubTitle Enter your email to search for your RSVP
       - if alert
         .alert-box{"data-alert" => ""}
           = "#{alert}"
           %a.close{href: "#", onclick: "$('.alert-box').hide(); return false"} ×
+      %h3.articleSubTitle Enter your email to search for your RSVP
       = form_tag({ controller: "wedding", action: "find_guest", method: "post" }, { remote: true, id: "find_guest"}) do
         .row
           .large-4.columns &nbsp;
