@@ -311,6 +311,14 @@ form {
   }
 }
 
+.top-bar.expanded .title-area {
+  background: inherit;
+}
+
+.top-bar.expanded .toggle-topbar a {
+  color: #ffffff;
+}
+
 .top-bar-section ul {
   background: inherit;
 }
