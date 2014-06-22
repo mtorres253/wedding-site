@@ -77,7 +77,7 @@ guest[66] = Guest.create({ name: 'Claire & Elena', email: 'Cgfriel1@yahoo.com', 
 guest[67] = Guest.create({ name: 'Mo & Coco', email: ' mophalon@gmail.com', departure_city: 'San Francisco, CA' })
 guest[68] = Guest.create({ name: 'Walter & Michael', email: 'turcot9859@icloud.com', departure_city: 'San Francisco, CA' })
 guest[69] = Guest.create({ name: 'Kane & Rossana', email: 'baccigalupi@gmail.com', departure_city: 'Richmond, CA' })
-guest[69] = Guest.create({ name: 'James & Brad', email: 'piscosanfrancisco@gmail.com', departure_city: 'San Francisco, CA' })
+guest[70] = Guest.create({ name: 'James & Brad', email: 'piscosanfrancisco@gmail.com', departure_city: 'San Francisco, CA' })
 
 guest.length.times do |i|
   Shortener::ShortenedUrl.generate("http://www.davidandmichael.com/?eeid=#{CGI::escape(guest[i].email_encrypted)}", guest[i])
