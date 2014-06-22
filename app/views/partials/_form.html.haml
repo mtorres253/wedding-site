@@ -19,11 +19,11 @@
           .large-5.columns
             %button{type: "button", id: "coming-button", :class => coming_class(@response.coming)}
               %i{:class => 'fa fa-smile-o fa-lg'} 
-              &nbsp; Yay, I'm Coming!
+              &nbsp; Yay, We're Coming!
           .large-5.columns
             %button{type: "button", id: "not-coming-button", :class => not_coming_class(@response.coming)} 
               %i{:class => 'fa fa-frown-o fa-lg'} 
-              &nbsp; Boo, I Can't Make It.
+              &nbsp; Boo, We Can't Make It.
           .large-1.columns &nbsp;
         .row
           .large-12.columns &nbsp;
@@ -49,7 +49,7 @@
                 = f.select :children, [0, 1, 2, 3, 4, 5], {placeholder: "large-2.columns"}
               .large-6.columns
                 = f.label :friday_reception
-                = f.select :friday_reception, [["I'm coming to the Friday event",true], ["I'm not coming to the Friday event", false]], {placeholder: "large-3.columns"}
+                = f.select :friday_reception, [["We're coming to the Friday reception",true], ["We are not coming to the Friday reception", false]], {placeholder: "large-3.columns"}
               .large-1.columns &nbsp;
             .row
               .large-1.columns &nbsp;
