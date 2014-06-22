@@ -28,13 +28,14 @@ class Admin::ResponsesController < AdminController
   # POST /responses.json
   def create
     @response = Response.new(response_params)
+    @guest = Guest.find_by_id(@response.guest_id)
 
     respond_to do |format|
       if @response.save
         format.html { render partial: 'partials/show', notice: 'Your RSVP has been saved' }
         format.json { render action: 'show', status: :created, location: @response }
       else
-        format.html { render action: 'new' }
+        format.html { render partial: 'partials/form', locals: { alert: @response.errors, id: @guest.id } }
         format.json { render json: @response.errors, status: :unprocessable_entity }
       end
     end
@@ -43,12 +44,13 @@ class Admin::ResponsesController < AdminController
   # PATCH/PUT /responses/1
   # PATCH/PUT /responses/1.json
   def update
+    
     respond_to do |format|
       if @response.update(response_params)
         format.html { render partial: 'partials/show', notice: 'Your RSVP was successfully updated' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
+        format.html { render partial: 'partials/form', locals: { alert: @response.errors, id: @guest.id } }
         format.json { render json: @response.errors, status: :unprocessable_entity }
       end
     end

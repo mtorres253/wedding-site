@@ -32,21 +32,40 @@ module WeddingHelper
   end
   
   def rsvp_number_of_guests response
-    @adult_copy = response.adults > 1 ? "adults" : "adult"
-    @child_copy = response.children > 1 ? "children" : "child"
-    @copy_number_of_guests = "I'm bringing"
-    @copy_number_of_guests += " #{response.adults} "
-    @copy_number_of_guests += @adult_copy
-    @copy_number_of_guests += response.children > 0 ? " and #{response.children} #{@child_copy}" : ""
+    @total_in_party = response.adults + response.children
+    @verb = @total_in_party > 1 ? 'are' : 'is'
+    @copy_number_of_guests = "There #{@verb} #{@total_in_party} #{'guest'.pluralize(@total_in_party)} in our party: #{response.adults} #{'adult'.pluralize(response.adults)}" 
+    @copy_number_of_guests += response.children > 0 ? " and #{response.children} #{'child'.pluralize(response.children)}" : ""
+    @copy_number_of_guests += "."
     return @copy_number_of_guests
   end
   
   def rsvp_friday_thingie response
-    @copy_friday_thingie = response.friday_reception? ? "I'm coming to the Friday thingie" : "I'm not coming to the friday thingie"
+    @total_in_party = response.adults + response.children
+    @noun_verb = @total_in_party > 1 ? "We're" : "I'm"
+    @copy_friday_thingie = response.friday_reception? ? "#{@noun_verb} coming to the Friday reception." : "#{@noun_verb} not coming to the friday reception."
   end
   
   def rsvp_comments response
-    @copy_comments = response.comments? ? "And I've got something to say: #{response.comments}" : nil
+    @total_in_party = response.adults + response.children
+    @verb = @total_in_party > 1 ? "we've" : "I've"
+    @copy_comments = response.comments? ? "And #{@verb} got something to say: #{response.comments}." : nil
   end
   
+  def rsvp_message response
+    if response.coming == true || response.coming == false
+      "Make sure to click the big blue button to save any changes."
+    else
+      "To send us your RSVP, fill out the form below and click the big blue button."
+    end
+  end
+  
+  def rsvp_button response
+    if response.coming == true || response.coming == false
+      "Change your RSVP"
+    else
+      "Save your RSVP"
+    end
+  end
+    
 end

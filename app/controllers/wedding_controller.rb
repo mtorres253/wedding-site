@@ -15,9 +15,15 @@ class WeddingController < ApplicationController
 
     respond_to do |format|
       if !@guest.nil?
-        @response = @guest.response.blank? ? Response.new : @guest.response
-        format.html { render partial: 'partials/form', notice: 'We Found You!' }
-        format.json { render json: @response.errors, status: :unprocessable_entity }
+        if @guest.response.blank?
+          @response = Response.new
+          format.html { render partial: 'partials/form', notice: "We don't have your RSVP yet" }
+          format.json { render json: @response.errors, status: :unprocessable_entity }
+        else
+          @response = @guest.response
+          format.html { render partial: 'partials/show', notice: 'We Found You!' }
+          format.json { render json: @response.errors, status: :unprocessable_entity }
+        end
       else
         format.html { render partial: 'partials/default', locals: { alert: "We're sorry, we can't find your email address. Please try again." } }
         format.json { head :no_content }

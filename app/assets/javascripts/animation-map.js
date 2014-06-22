@@ -9,7 +9,7 @@ WS.AnimationMap = function(elem) {
   var ANIMATION_TIME           = 2000;              // Time in milliseconds
   var DESTINATION_COORDS       = [38.04, -122.79];  // Point Reyes Seashore Lodge
   var DISTANCE_REQUIRED_TO_FLY = 160.934;           // 100 miles = 160.934 KM
-
+  
   self.elem  = elem;
   self.$elem = $('#' + elem);
 
@@ -30,6 +30,17 @@ WS.AnimationMap = function(elem) {
     return R * c;
   };
 
+  self._getRotationOfPlane = function(lat1,lon1,lat2,lon2) {
+    var R    = 6371; // Radius of the earth in km
+    var dLat = self._deg2rad(lat2-lat1);
+    var dLon = self._deg2rad(lon2-lon1);
+    var a    = Math.sin(dLat/2) * Math.sin(dLat/2) +
+               Math.cos(self._deg2rad(lat1)) * Math.cos(self._deg2rad(lat2)) *
+               Math.sin(dLon/2) * Math.sin(dLon/2);
+    var c    = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+    return R * c;
+  };
   // Setup Methods
   self._setCoords = function() {
     var dfr = new $.Deferred();
@@ -106,7 +117,6 @@ WS.AnimationMap = function(elem) {
     self.vehicleIcon = new L.icon({
       iconUrl: '/assets/images/' + vehicle + '-24.png',
       iconSize: [24, 24],
-      // iconAngle: slope,
       shadowUrl: null
     });
   };

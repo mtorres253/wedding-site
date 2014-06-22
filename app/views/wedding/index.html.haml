@@ -40,14 +40,11 @@
         .large-6.columns.copy
           %h3.articleSubTitle.left-align To David and Michael's Wedding
           %p.left-align 
-            = "We started on this expedition almost 19 years ago and on September 27th, 2014, we're making a stop to celebrate. at the "
-            = link_to "Point Reyes Seashore Lodge", "http://http://www.pointreyesseashore.com/", {:target => "_blank"} 
+            = "We started on this expedition almost 19 years ago and on September 27th, 2014, we're making a stop to celebrate at the "
+            = link_to "Point Reyes Seashore Lodge.", "http://http://www.pointreyesseashore.com/", {:target => "_blank"} 
           %p.left-align We are so grateful to have all of you in our lives and would be honored if you’d join us in celebration of the life we’ve created together and the journey ahead.
           %p.left-align Come back to this website using the link in your email to get updates, or to view or change your RSVP details.
         .large-1.columns &nbsp;
-      .row
-        .large-12.columns
-          =image_tag "hibiscus-md.png", {:height => "20", :style => "margin: auto; height: 80px;"}
 %section#schedule.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     .box.transparent_white
@@ -72,7 +69,7 @@
           %h3.articleSubTitle.left-align
             = "Saturday Afternoon, 9/27/14"
           %h3.subhead.left-align Be Punctual for the Nuptials &hellip; 
-          %p.left-align A short ceremony will take place at 3:00 PM on the lawn behind the Lodge. It will be followed by a cocktail hour and then a buffet dinner from 4:30 PM to 7:30PM.
+          %p.left-align A short ceremony will take place at 3:00 PM on the lawn behind the Lodge. It will be followed by a cocktail hour and then a buffet dinner from 4:30 PM to 7:30 PM.
       .row
         .large-12.columns &nbsp;
       .row
@@ -94,10 +91,9 @@
           %p.left-align 
             = "We will be meeting up at the " 
             = link_to "The Station House Cafe", "http://www.stationhousecafe.com", {:target => "_blank"}
-            = " for Brunch at 11:00 AM"
+            = " for Brunch at 11:00 AM."
       .row
-        .large-12.columns
-          =image_tag "hibiscus-md.png", {:height => "20", :style => "margin: auto; height: 80px;"}
+        .large-12.columns &nbsp;
 %section#directions.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
     .box.transparent_white
@@ -114,11 +110,13 @@
         .large-4.columns
           %h3.subhead Point Reyes Seashore Lodge
           %iframe{height: "300", src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kwIfxax1grNE", width: "95%"}
-          %p.left-align.note The Point Reyes Seashore Lodge is at the intersection of Sir Francis Drake and Highway 1
+          %p.left-align.note The Point Reyes Seashore Lodge is at the intersection of Sir Francis Drake and Highway 1.
         .large-4.columns
           %h3.subhead Station House Cafe
           %iframe{height: "300", src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kZpBxZo4JOwc", width: "95%"}
-          %p.left-align.note The Station House Cafe is located in Point Reyes Station, just a short drive up Highway 1 from Olema
+          %p.left-align.note The Station House Cafe is located in Point Reyes Station, just a short drive up Highway 1 from Olema.
+      .row
+        .large-12.columns &nbsp;
 %section#registry.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     .box.transparent_white
@@ -153,11 +151,15 @@
           %p.left-align
             = link_to "Olema Campground", "http://www.olemacampground.net/location-and-directions.html", {:target => "_blank"}
           %h3.subhead.left-align Childcare
-          %p.left-align 
-            = link_to "Papermill Creek Children’s Corner (415-663-9114)", "http://www.yelp.com/biz/papermill-creek-childrens-corner-point-reyes-station"
+          %p.left-align.nomargin 
+            = link_to "Papermill Creek Children’s Corner", "http://www.yelp.com/biz/papermill-creek-childrens-corner-point-reyes-station", {:target => "_blank"}
+          %p.left-align.note
+            %i Telephone: 415-663-9114
           %h3.subhead.left-align Transportation
-          %p.left-align 
-            = link_to "Marin door to door (415-457-2717)", "http://www.marindoortodoor.com", {:target => "_blank"}
+          %p.left-align.nomargin 
+            = link_to "Marin door to door", "http://www.marindoortodoor.com", {:target => "_blank"}
+          %p.left-align.note
+            %i Telephone: 415-663-9114
 
         .large-1.columns &nbsp;
       .row
@@ -173,7 +175,8 @@
               = "Your presence at our wedding is the greatest gift of all. However, if you would like to honor us with a gift, you may"
               = link_to " contribute to our honeymoon here.", "http://www.backroads.com", {:target => "_blank"}
         .large-1.columns &nbsp;
-        
+      .row
+        .large-12.columns &nbsp;
 
 %section#rsvp.boxShadow{"data-speed" => "2", "data-type" => "background"}
   .content
@@ -188,7 +191,7 @@
 
 - if @guest && @guest.departure_city
   %section#animation-map{'data-origin' => @guest.departure_city}
-    %h2.articleTitle{:style => "position: absolute; top: 20px; text-align: center; z-index: 10; width: 100%"} 
+    %h2.articleTitle
       = "Have a nice trip!"
   :javascript
     window.animationMap = new WS.AnimationMap('animation-map').init();

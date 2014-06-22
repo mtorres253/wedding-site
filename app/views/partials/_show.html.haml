@@ -1,7 +1,8 @@
 .box.transparent_white
   .row
     .large-12.columns
-      %h2.articleTitle We've got your RSVP
+      %h2.articleTitle 
+        = "Your RSVP is confirmed."
   .row
     .large-12.columns &nbsp;
   .row
@@ -10,7 +11,7 @@
         / Your content goes here
         %a.close{href: "#"} ×
       -if @response.coming
-        %h3.articleSubTitle We can't wait to see you! Here is your confirmation
+        %h3.articleSubTitle We can't wait to see you! Here are your RSVP details:
         .rsvp_inner_box
           %p 
             = rsvp_number_of_guests(@response)
@@ -20,7 +21,8 @@
             %p
               = rsvp_comments(@response)
       -else
-        %h3.articleSubTitle We'll miss you! Let us know if you change your mind.
+        %p
+          %h3.articleSubTitle We're sorry we'll miss you! Let us know if you change your mind.
         .rsvp_inner_box
-      %p= link_to "Change My RSVP", "javascript:void();", {:class => "large button [radius round]", :onclick => "$('#rsvp_content').html('#{escape_javascript(render :partial => 'partials/form')}');"}
+      %p= link_to rsvp_button(@response), "javascript:void();", {:class => "large button [radius round]", :onclick => "$('#rsvp_content').html('#{escape_javascript(render :partial => 'partials/form')}');"}
   
