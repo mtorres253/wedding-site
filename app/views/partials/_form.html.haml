@@ -15,7 +15,7 @@
               = msg[1][0]
             %a.close{href: "#", onclick: "$('.alert-box').hide(); return false"} ×
         .row
-          .large-1.columns &nbsp;
+          .large-1.columns.buffer &nbsp;
           .large-5.columns
             %button{type: "button", id: "coming-button", :class => coming_class(@response.coming)}
               %i{:class => 'fa fa-smile-o fa-lg'} 
@@ -24,7 +24,7 @@
             %button{type: "button", id: "not-coming-button", :class => not_coming_class(@response.coming)} 
               %i{:class => 'fa fa-frown-o fa-lg'} 
               &nbsp; Boo, We Can't Make It.
-          .large-1.columns &nbsp;
+          .large-1.columns.buffer &nbsp;
         .row
           .large-12.columns &nbsp;
         #not_coming_message{:class => not_coming_message_class(@response.coming)}
@@ -40,7 +40,7 @@
                 = f.radio_button :coming, true, {placeholder: "large-2.columns"}
                 = f.radio_button :coming, false, {placeholder: "large-2.columns"}
             .row
-              .large-1.columns &nbsp;
+              .large-1.columns.buffer &nbsp;
               .large-2.columns
                 = f.label :adults
                 = f.select :adults, [1, 2], {placeholder: "large-2.columns"}
@@ -50,9 +50,9 @@
               .large-6.columns
                 = f.label :friday_reception
                 = f.select :friday_reception, [["We're coming to the Friday reception",true], ["We are not coming to the Friday reception", false]], {placeholder: "large-3.columns"}
-              .large-1.columns &nbsp;
+              .large-1.columns.buffer &nbsp;
             .row
-              .large-1.columns &nbsp;
+              .large-1.columns.buffer &nbsp;
               .large-10.columns
                 = f.label :comments
                 = f.text_area :comments
@@ -60,7 +60,7 @@
                   .field
                     = f.hidden_field :guest_id, :value => @guest.id
                 
-              .large-1.columns &nbsp;
+              .large-1.columns.buffer &nbsp;
           .row
             .large-12.columns &nbsp;
         .row

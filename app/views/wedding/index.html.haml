@@ -34,7 +34,7 @@
       .row
         .large-12.columns &nbsp;
       .row.home_message
-        .large-1.columns &nbsp;
+        .large-1.columns.buffer &nbsp;
         .large-4.columns
           =image_tag "photo.JPG", {:height => "300", :width => "300"}
         .large-6.columns.copy
@@ -44,7 +44,7 @@
             = link_to "Point Reyes Seashore Lodge.", "http://http://www.pointreyesseashore.com/", {:target => "_blank"} 
           %p.left-align We are so grateful to have all of you in our lives and would be honored if you’d join us in celebration of the life we’ve created together and the journey ahead.
           %p.left-align Come back to this website using the link in your email to get updates, or to view or change your RSVP details.
-        .large-1.columns &nbsp;
+        .large-1.columns.buffer &nbsp;
 %section#schedule.boxShadow{"data-speed" => "4", "data-type" => "background"}
   .content
     .box.transparent_white
@@ -55,7 +55,7 @@
         .large-12.columns &nbsp;
       .row
         .large-1.columns{:style => "padding-right: 0px"}
-          %h3.right.icon
+          %h3.icon
             %i{:class => "fa fa-moon-o"}
         .large-5.columns
           %h3.articleSubTitle.left-align
@@ -63,18 +63,18 @@
           %h3.subhead.left-align Don't be Tardy for the Party &hellip; 
           %p.left-align David’s parents, Gary Olem And Michele Riu Olem invite you to join them for a reception at the Redwood Grove at Samuel Taylor State Park from 4:00 PM to 7:00 PM.
         .large-1.columns{:style => "padding-right: 0px"}
-          %h3.right.icon
+          %h3.icon
             %i{:class => "fa fa-sun-o yellow"}
         .large-5.columns
           %h3.articleSubTitle.left-align
             = "Saturday Afternoon, 9/27/14"
           %h3.subhead.left-align Be Punctual for the Nuptials &hellip; 
-          %p.left-align A short ceremony will take place at 3:00 PM on the lawn behind the Lodge. It will be followed by a cocktail hour and then a buffet dinner from 4:30 PM to 7:30 PM.
+          %p.left-align.col2 A short ceremony will take place at 3:00 PM on the lawn behind the Lodge. It will be followed by a cocktail hour and then a buffet dinner from 4:30 PM to 7:30 PM.
       .row
         .large-12.columns &nbsp;
       .row
         .large-1.columns{:style => "padding-right: 0px"}
-          %h3.right.icon
+          %h3.icon
             %i{:class => "fa fa-moon-o"}
         .large-5.columns
           %h3.articleSubTitle.left-align
@@ -82,13 +82,13 @@
           %h3.subhead.left-align It’d Be Great if You Stay Late &hellip; 
           %p.left-align Come on over to The Farmhouse next door and dance from 8:00 PM ‘til midnight.
         .large-1.columns{:style => "padding-right: 0px"}
-          %h3.right.icon
+          %h3.icon
             %i{:class => "fa fa-sun-o yellow"}
         .large-5.columns
           %h3.articleSubTitle.left-align 
             = "Sunday Morning, 9/28/14"
           %h3.subhead.left-align Feel Free to Spill the Tea &hellip; 
-          %p.left-align 
+          %p.left-align.col2 
             = "We will be meeting up at the " 
             = link_to "The Station House Cafe", "http://www.stationhousecafe.com", {:target => "_blank"}
             = " for Brunch at 11:00 AM."
@@ -111,15 +111,15 @@
       .row
         .large-4.columns
           %h3.subhead Samuel P Taylor Redwood Grove
-          %iframe{height: "300", src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kLp3uxn0B4i0", width: "95%"}
+          %iframe.map{src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kLp3uxn0B4i0"}
           %p.left-align.note The Samuel P Taylor redwood grove is a short drive from Olema on Sir Francis Drake. 
         .large-4.columns
           %h3.subhead Point Reyes Seashore Lodge
-          %iframe{height: "300", src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kwIfxax1grNE", width: "95%"}
+          %iframe.map{src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kwIfxax1grNE"}
           %p.left-align.note The Point Reyes Seashore Lodge is at the intersection of Sir Francis Drake and Highway 1.
         .large-4.columns
           %h3.subhead Station House Cafe
-          %iframe{height: "300", src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kZpBxZo4JOwc", width: "95%"}
+          %iframe.map{src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kZpBxZo4JOwc"}
           %p.left-align.note The Station House Cafe is located in Point Reyes Station, just a short drive up Highway 1 from Olema.
       .row
         .large-12.columns &nbsp;
@@ -128,11 +128,11 @@
     .box.transparent_white
       .row
         .large-12.columns
-          %h2.articleTitle Accomodations & Resources
+          %h2.articleTitle.break-word Accomodations & Resources
       .row
         .large-12.columns &nbsp;
       .row
-        .large-1.columns &nbsp;
+        .large-1.columns.buffer &nbsp;
         .large-5.columns
           %h3.subhead.left-align Accommodations
           %p.left-align.nomargin
@@ -167,11 +167,11 @@
           %p.left-align.note
             %i Telephone: 415-663-9114
 
-        .large-1.columns &nbsp;
+        .large-1.columns.buffer &nbsp;
       .row
         .large-12.columns &nbsp;
       .row
-        .large-1.columns &nbsp;
+        .large-1.columns.buffer &nbsp;
         .large-10.columns
           .honeymoon-registry
             %h3.subhead.left-align 
@@ -180,7 +180,7 @@
             %p.left-align
               = "Your presence at our wedding is the greatest gift of all. However, if you would like to honor us with a gift, you may"
               = link_to " contribute to our honeymoon here.", "http://www.backroads.com", {:target => "_blank"}
-        .large-1.columns &nbsp;
+        .large-1.columns.buffer &nbsp;
       .row
         .large-12.columns &nbsp;
 
