@@ -340,6 +340,14 @@ form {
     display: none;
   }
 
+  .box {
+    width: 98%;
+  }
+  
+  .small-top-cell {
+    margin-bottom: 30px;
+  }
+  
   .map {
     width: 95%;
     height: 150px;
@@ -379,7 +387,8 @@ form {
       text-align: center;
       font-size: 150%;
       margin-bottom: 2%;
-      background-color:rgba(255,255,255,0.80);
+      padding: 1%;
+      background-color:rgba(255,255,255,0.55);
     }
   }
   
@@ -411,6 +420,11 @@ form {
     height: 200px;
   }
   
+  .small-top-cell {
+    margin-bottom: 30px;
+  }
+  
+  
   #home {
     height: 1100px;
     h3, h2 {
@@ -430,11 +444,13 @@ form {
   }
   
   #schedule {
-    height: 1100px;
+    height: 1200px;
     h3.icon {
       text-align: center;
       font-size: 150%;
-      margin-bottom: 15px;
+      margin-bottom: 2%;
+      padding: 1%;
+      background-color:rgba(255,255,255,0.55);
     }
   }
   
