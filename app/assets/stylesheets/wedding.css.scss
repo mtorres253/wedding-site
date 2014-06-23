@@ -503,19 +503,6 @@ form {
   .box {
     min-width:1000px;
   }
-  #home {
-    .home_message {
-      padding-top: 0px;
-      padding-bottom: 15px;
-    }
-    .copy {
-      padding-top: 0px;
-    }
-  }
-}
-@media #{$large-only} { }
-
-@media #{$xlarge-up} {
   #registry {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -548,6 +535,13 @@ form {
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='blue-glitter-bg.jpg', sizingMethod='scale')";
   }
   #home {
+    .home_message {
+      padding-top: 0px;
+      padding-bottom: 15px;
+    }
+    .copy {
+      padding-top: 0px;
+    }
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -555,8 +549,11 @@ form {
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.point-reyes-sunset-bg.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='point-reyes-sunset-bg.jpg', sizingMethod='scale')";
   }
-
+  
 }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
 @media #{$xlarge-only} { }
 
 @media #{$xxlarge-up} { }
