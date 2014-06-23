@@ -3,10 +3,10 @@
     %ul.title-area
       %li.name
         %h1
-          %a{href: "#"} David and Michael's Wedding
+          %a{href: "#", onclick:"javascript:return false"} David and Michael's Wedding
       / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
       %li.toggle-topbar.menu-icon
-        %a{href: "#"}
+        %a{href: "#", onclick:"javascript:return false"}
           %span Menu
     %section.top-bar-section
       / Right Nav Section
@@ -54,7 +54,7 @@
       .row
         .large-12.columns &nbsp;
       .row
-        .large-1.columns{:style => "padding-right: 0px"}
+        .large-1.columns.small_header
           %h3.icon
             %i{:class => "fa fa-moon-o"}
         .large-5.columns
@@ -62,7 +62,7 @@
             = "Friday Evening, 9/26/14"
           %h3.subhead.left-align Don't be Tardy for the Party &hellip; 
           %p.left-align.small-top-cell David’s parents, Gary Olem And Michele Riu Olem invite you to join them for a reception at the Redwood Grove at Samuel Taylor State Park from 4:00 PM to 7:00 PM.
-        .large-1.columns{:style => "padding-right: 0px"}
+        .large-1.columns.small_header
           %h3.icon
             %i{:class => "fa fa-sun-o yellow"}
         .large-5.columns
@@ -73,7 +73,7 @@
       .row
         .large-12.columns &nbsp;
       .row
-        .large-1.columns{:style => "padding-right: 0px"}
+        .large-1.columns.small_header
           %h3.icon
             %i{:class => "fa fa-moon-o"}
         .large-5.columns
@@ -81,7 +81,7 @@
             = "Saturday Night, 9/27/14"
           %h3.subhead.left-align It’d Be Great if You Stay Late &hellip; 
           %p.left-align.small-top-cell Come on over to The Farmhouse next door and dance from 8:00 PM ‘til midnight.
-        .large-1.columns{:style => "padding-right: 0px"}
+        .large-1.columns.small_header
           %h3.icon
             %i{:class => "fa fa-sun-o yellow"}
         .large-5.columns

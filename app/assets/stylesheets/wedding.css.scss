@@ -81,6 +81,8 @@ p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.point-reyes-sunset-bg.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='point-reyes-sunset-bg.jpg', sizingMethod='scale')";
   h3, h2 {
     color: $subheader-color-home;
   }
@@ -100,6 +102,8 @@ p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.blue-glitter-bg.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='blue-glitter-bg.jpg', sizingMethod='scale')";
   h3, h2 {
     color: $subheader-color-schedule;
   }
@@ -109,6 +113,9 @@ p {
   h3.icon {
     text-align: right;
     font-size: 150%;
+  }
+  .columns.small_header {
+    padding-right: 0px;
   }
 }
 
@@ -122,6 +129,8 @@ p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.redwood-forest-bg.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='redwood-forest-bg.jpg', sizingMethod='scale')";
   h3, h2 {
     color: $subheader-color-directions;
   }
@@ -144,8 +153,13 @@ p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.path-to-lighthouse-bg.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path-to-lighthouse-bg.jpg', sizingMethod='scale')";
   h3, h2 {
     color: $subheader-color-rsvp;
+  }
+  .rsvp_inner_box {
+    padding-bottom: 4%;
   }
 }
 
@@ -159,6 +173,8 @@ p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.pink-glitter-bg.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='pink-glitter-bg.jpg', sizingMethod='scale')";
   h3, h2 {
     color: $subheader-color-registry;
   }
@@ -369,6 +385,12 @@ form {
     display: none;
   }
 
+
+  .rsvp_inner_box {
+    padding: 0px;
+    padding-top: 2%;
+  }
+  
   .box {
     width: 98%;
   }
@@ -399,7 +421,7 @@ form {
     }
     .home_message {
       padding-top: 2%;
-      padding-bottom: 20%;
+      padding-bottom: 7%;
     }
     .copy {
       padding-top: 5%;
@@ -419,6 +441,9 @@ form {
       padding: 1%;
       background-color:rgba(255,255,255,0.55);
     }
+    .columns.small_header {
+      padding-left: 0px;
+    }
   }
   
   #directions {
@@ -431,6 +456,10 @@ form {
   
   #rsvp {
     height: 1000px;
+  }
+  
+  .button.large, .button.large {
+    font-size: 1rem;
   }
   
 }
@@ -461,7 +490,7 @@ form {
     }
     .home_message {
       padding-top: 2%;
-      padding-bottom: 20%;
+      padding-bottom: 7%;
     }
     img {
       height: 300px;
@@ -480,6 +509,9 @@ form {
       margin-bottom: 2%;
       padding: 1%;
       background-color:rgba(255,255,255,0.55);
+    }
+    .columns.small_header {
+      padding-left: 0px;
     }
   }
   
