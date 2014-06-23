@@ -77,12 +77,6 @@ p {
   width: 100%;
   height: 750px;
   background: url("point-reyes-sunset-bg.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.point-reyes-sunset-bg.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='point-reyes-sunset-bg.jpg', sizingMethod='scale')";
   h3, h2 {
     color: $subheader-color-home;
   }
@@ -98,12 +92,6 @@ p {
   width: 100%;
   height: 750px;
 	background: url("blue-glitter-bg.jpg") 50% 0 repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.blue-glitter-bg.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='blue-glitter-bg.jpg', sizingMethod='scale')";
   h3, h2 {
     color: $subheader-color-schedule;
   }
@@ -125,11 +113,6 @@ p {
   width: 100%;
   height: 750px;
 	background: url("redwood-forest-bg.jpg") no-repeat center center fixed;  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.redwood-forest-bg.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='redwood-forest-bg.jpg', sizingMethod='scale')";
   h3, h2 {
     color: $subheader-color-directions;
@@ -149,12 +132,6 @@ p {
   width: 100%;
   height: 750px;
 	background: url("path-to-lighthouse-bg.jpg") 10% 50% repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.path-to-lighthouse-bg.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path-to-lighthouse-bg.jpg', sizingMethod='scale')";
   h3, h2 {
     color: $subheader-color-rsvp;
   }
@@ -169,12 +146,6 @@ p {
   width: 100%;
   height: 750px;
   background: url("pink-glitter-bg.jpg") 50% 0 repeat;  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.pink-glitter-bg.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='pink-glitter-bg.jpg', sizingMethod='scale')";
   h3, h2 {
     color: $subheader-color-registry;
   }
@@ -415,7 +386,7 @@ form {
   }
   
   #home {
-    height: 950px;
+    height: 720px;
     h3, h2 {
       color: $subheader-color-home;
     }
@@ -433,7 +404,7 @@ form {
   }
   
   #schedule {
-    height: 1200px;
+    height: 1080px;
     h3.icon {
       text-align: center;
       font-size: 150%;
@@ -447,15 +418,15 @@ form {
   }
   
   #directions {
-    height: 1100px;
+    height: 1000px;
   }
   
   #registry {
-    height: 1000px;
+    height: 900px;
   }
   
   #rsvp {
-    height: 1000px;
+    height: 900px;
   }
   
   .button.large, .button.large {
@@ -544,7 +515,48 @@ form {
 }
 @media #{$large-only} { }
 
-@media #{$xlarge-up} { }
+@media #{$xlarge-up} {
+  #registry {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.pink-glitter-bg.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='pink-glitter-bg.jpg', sizingMethod='scale')";
+  }
+  #rsvp {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.path-to-lighthouse-bg.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path-to-lighthouse-bg.jpg', sizingMethod='scale')";
+  }
+  #directions {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.redwood-forest-bg.jpg', sizingMethod='scale');
+  }
+  #schedule {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.blue-glitter-bg.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='blue-glitter-bg.jpg', sizingMethod='scale')";
+  }
+  #home {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.point-reyes-sunset-bg.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='point-reyes-sunset-bg.jpg', sizingMethod='scale')";
+  }
+
+}
 @media #{$xlarge-only} { }
 
 @media #{$xxlarge-up} { }
