@@ -198,7 +198,8 @@ p {
 }
 
 .box {
-  background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
+  background: url("crumpled-paper.png") 0 0 repeat repeat;
+//  background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
 //  background-color:rgba(255,255,255,0.95);
   position: relative;
   top: 10px;
@@ -226,7 +227,7 @@ p {
 .articleTitle {
   margin-bottom: 2%;
   font-family: 'Wellfleet', cursive;
-  font-size: 350%;
+  font-size: 300%;
   line-height: 1em;
 }
 
@@ -266,9 +267,9 @@ form {
 
 .deselected { 
 	@include button;
-	background: #cccccc;
-  border: 2px solid #cccccc;
-	background-color: #cccccc;
+	background: #cdcdcd;
+  border: 2px solid #cdcdcd;
+	background-color: #cdcdcd;
 }
 
 .deselected:hover, .deselected:visited, .deselected:focus {
@@ -488,6 +489,7 @@ form {
   
   #directions {
     height: 1200px;
+	  background: url("redwood-forest-bg.jpg") repeat center center fixed;  
   }
   
   #registry {

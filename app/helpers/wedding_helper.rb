@@ -56,7 +56,7 @@ module WeddingHelper
     if response.coming == true || response.coming == false
       "Make sure to click the big blue button to save any changes."
     else
-      "To send us your RSVP, fill out the form below and click the big blue button."
+      "RSVP for #{@guest.name} using form below, then click the big blue button."
     end
   end
   
