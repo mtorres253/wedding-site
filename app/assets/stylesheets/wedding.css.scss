@@ -113,7 +113,6 @@ p {
   width: 100%;
   height: 750px;
 	background: url("redwood-forest-bg.jpg") no-repeat center center fixed;  
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='redwood-forest-bg.jpg', sizingMethod='scale')";
   h3, h2 {
     color: $subheader-color-directions;
   }
@@ -198,7 +197,7 @@ p {
 }
 
 .box {
-  background: url("crumpled-paper.png") 0 0 repeat repeat;
+  background: url("content-bg.png") 0 0 repeat repeat;
 //  background: url("WatercolorTutorial_PaperTexture.png") 0 0 repeat;
 //  background-color:rgba(255,255,255,0.95);
   position: relative;
@@ -527,6 +526,7 @@ form {
     -o-background-size: cover;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.redwood-forest-bg.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='redwood-forest-bg.jpg', sizingMethod='scale')";
   }
   #schedule {
     -webkit-background-size: cover;
