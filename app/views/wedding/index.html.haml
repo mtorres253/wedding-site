@@ -111,15 +111,15 @@
       .row
         .large-4.columns
           %h3.subhead Samuel P Taylor Redwood Grove
-          %iframe.map#samtaylor{src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kLp3uxn0B4i0", style: "pointer-events:none"}
+          %iframe.map#samtaylor{src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kLp3uxn0B4i0" }
           %p.left-align.note The Samuel P Taylor redwood grove is a short drive from Olema on Sir Francis Drake. 
         .large-4.columns
           %h3.subhead Point Reyes Seashore Lodge
-          %iframe.map#prslodge{src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kwIfxax1grNE", style: "pointer-events:none"}
+          %iframe.map#prslodge{src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kwIfxax1grNE" }
           %p.left-align.note The Point Reyes Seashore Lodge is at the intersection of Sir Francis Drake and Highway 1.
         .large-4.columns
           %h3.subhead Station House Cafe
-          %iframe.map#shcafe{src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kZpBxZo4JOwc", style: "pointer-events:none"}
+          %iframe.map#shcafe{src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kZpBxZo4JOwc"}
           %p.left-align.note The Station House Cafe is located in Point Reyes Station, just a short drive up Highway 1 from Olema.
       .row
         .large-12.columns &nbsp;
@@ -194,10 +194,10 @@
           = render 'partials/form'
       - else
         = render 'partials/default'
-
-- if @guest && @guest.departure_city
-  %section#animation-map{'data-origin' => @guest.departure_city}
-    %h2.articleTitle
-      = "Have a nice trip!"
-  :javascript
-    window.animationMap = new WS.AnimationMap('animation-map').init();
+/
+/ - if @guest && @guest.departure_city
+/   %section#animation-map{'data-origin' => @guest.departure_city}
+/     %h2.articleTitle
+/       = "Have a nice trip!"
+/   :javascript
+/     window.animationMap = new WS.AnimationMap('animation-map').init();
