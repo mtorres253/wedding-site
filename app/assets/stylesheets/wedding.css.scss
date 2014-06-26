@@ -350,12 +350,6 @@ form {
   .buffer {
     display: none;
   }
-
-
-  .rsvp_inner_box {
-    padding: 0px;
-    padding-top: 2%;
-  }
   
   .box {
     width: 98%;
@@ -374,6 +368,7 @@ form {
     font-size: 200%;
     line-height: 1em;
   }
+  
   .subhead {
     margin-top: 0px;
     margin-bottom: 10px;
@@ -381,7 +376,7 @@ form {
   }
   
   #home {
-    background: url("point-reyes-sunset-bg-phone.jpg") repeat 50% 50%;
+    background: url("point-reyes-sunset-bg-phone.jpg") 50% 50% repeat;
     height: 720px;
     h3, h2 {
       color: $subheader-color-home;
@@ -401,7 +396,7 @@ form {
   
   #schedule {
   	background: url("blue-glitter-bg-sm.jpg") 50% 0 repeat;
-    height: 1080px;
+    height: 1120px;
     h3.icon {
       text-align: center;
       font-size: 150%;
@@ -415,7 +410,7 @@ form {
   }
   
   #directions {
-  	background: url("redwood-forest-bg-phone.jpg") repeat 50% 50%;  
+  	background: url("redwood-forest-bg-phone.jpg") 50% 50% repeat;  
     height: 1000px;
   }
   
@@ -425,13 +420,22 @@ form {
   }
   
   #rsvp {
-  	background: url("path-to-lighthouse-bg-phone.jpg") repeat 0% 50%;
+  	background: url("path-to-lighthouse-bg-phone.jpg") 0% 50% repeat;
     height: 800px;
+    .rsvp_inner_box {
+      width: 95%;
+      padding: 0px;
+    }
   }
   
   .button.large, .button.large {
-    font-size: 1rem;
+    font-size: .9rem;
   }
+  
+  .selected, .deselected {
+    font-size: 1em;
+  }
+  
   
 }
 
