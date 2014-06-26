@@ -12,7 +12,8 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery.ui.core
+//= require jquery.ui.effect
 //= require leaflet
 //= require animated-marker
 //= require_tree .
