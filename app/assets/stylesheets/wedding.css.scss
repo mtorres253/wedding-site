@@ -76,7 +76,6 @@ p {
   margin: 45,auto;
   width: 100%;
   height: 750px;
-  background: url("point-reyes-sunset-bg-sm.jpg") no-repeat 50% 50% fixed;
   h3, h2 {
     color: $subheader-color-home;
   }
@@ -91,7 +90,6 @@ p {
   margin: 0 auto;
   width: 100%;
   height: 750px;
-	background: url("blue-glitter-bg-sm.jpg") 50% 0 repeat;
   h3, h2 {
     color: $subheader-color-schedule;
   }
@@ -112,7 +110,6 @@ p {
   margin: 0 auto;
   width: 100%;
   height: 750px;
-	background: url("redwood-forest-bg-sm.jpg") no-repeat 50% 50% fixed;  
   h3, h2 {
     color: $subheader-color-directions;
   }
@@ -130,7 +127,6 @@ p {
   margin: 0 auto;
   width: 100%;
   height: 750px;
-	background: url("path-to-lighthouse-bg-sm.jpg") no-repeat 10% 50% fixed;
   h3, h2 {
     color: $subheader-color-rsvp;
   }
@@ -144,7 +140,6 @@ p {
   margin: 0 auto;
   width: 100%;
   height: 750px;
-  background: url("pink-glitter-bg-sm.jpg") 50% 0 repeat;  
   h3, h2 {
     color: $subheader-color-registry;
   }
@@ -386,6 +381,7 @@ form {
   }
   
   #home {
+    background: url("point-reyes-sunset-bg-phone.jpg") no-repeat 50% 50% fixed;
     height: 720px;
     h3, h2 {
       color: $subheader-color-home;
@@ -404,6 +400,7 @@ form {
   }
   
   #schedule {
+  	background: url("blue-glitter-bg-sm.jpg") 50% 0 repeat;
     height: 1080px;
     h3.icon {
       text-align: center;
@@ -418,14 +415,17 @@ form {
   }
   
   #directions {
+  	background: url("redwood-forest-bg-phone.jpg") no-repeat 50% 50% fixed;  
     height: 1000px;
   }
   
-  #registry {
+  #registry {  
+    background: url("pink-glitter-bg-sm.jpg") 50% 0 repeat;  
     height: 900px;
   }
   
   #rsvp {
+  	background: url("path-to-lighthouse-bg-phone.jpg") no-repeat 10% 50% fixed;
     height: 900px;
   }
   
@@ -435,7 +435,23 @@ form {
   
 }
 
-@media #{$medium-up} { }
+@media #{$medium-up} {
+  #registry {  
+    background: url("pink-glitter-bg-sm.jpg") 50% 0 repeat;  
+  }
+  #home {
+    background: url("point-reyes-sunset-bg-sm.jpg") no-repeat 50% 50% fixed;
+  }
+  #directions {
+    background: url("redwood-forest-bg-sm.jpg") no-repeat 50% 50% fixed;  
+  }
+  #schedule {
+    background: url("blue-glitter-bg-sm.jpg") 50% 0 repeat;
+  }
+  #rsvp {
+    background: url("path-to-lighthouse-bg-sm.jpg") no-repeat 50% 50% fixed;
+  }
+}
 @media #{$medium-only} {
   .buffer {
     display: none;
@@ -488,7 +504,6 @@ form {
   
   #directions {
     height: 1200px;
-	  background: url("redwood-forest-bg.jpg") repeat center center fixed;  
   }
   
   #registry {
