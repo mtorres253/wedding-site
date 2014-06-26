@@ -195,10 +195,10 @@
           = render 'partials/form'
       - else
         = render 'partials/default'
-
-- if @guest && @guest.departure_city
-  %section#animation-map{'data-origin' => @guest.departure_city}
-    %h2.articleTitle
-      = "Have a nice trip!"
-  :javascript
-    window.animationMap = new WS.AnimationMap('animation-map').init();
+/
+/ - if @guest && @guest.departure_city
+/   %section#animation-map{'data-origin' => @guest.departure_city}
+/     %h2.articleTitle
+/       = "Have a nice trip!"
+/   :javascript
+/     window.animationMap = new WS.AnimationMap('animation-map').init();
