@@ -351,6 +351,10 @@ form {
     display: none;
   }
   
+  .content {
+    top: 30px;
+  }
+  
   .box {
     width: 98%;
   }
@@ -400,7 +404,7 @@ form {
   
   #schedule {
   	background: url("blue-glitter-bg-sm.jpg") 50% 0 repeat;
-    height: 1120px;
+    height: 1080px;
     h3.icon {
       text-align: center;
       font-size: 150%;
@@ -415,12 +419,12 @@ form {
   
   #directions {
   	background: url("redwood-forest-bg-phone.jpg") 50% 50% repeat;  
-    height: 1000px;
+    height: 980px;
   }
   
   #registry {  
     background: url("pink-glitter-bg-sm.jpg") 50% 0 repeat;  
-    height: 900px;
+    height: 860px;
   }
   
   #rsvp {
