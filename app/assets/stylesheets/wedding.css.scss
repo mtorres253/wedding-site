@@ -381,7 +381,7 @@ form {
   }
   
   #home {
-    background: url("point-reyes-sunset-bg-phone.jpg") no-repeat 50% 50% fixed;
+    background: url("point-reyes-sunset-bg-phone.jpg") repeat 50% 50%;
     height: 720px;
     h3, h2 {
       color: $subheader-color-home;
@@ -415,7 +415,7 @@ form {
   }
   
   #directions {
-  	background: url("redwood-forest-bg-phone.jpg") no-repeat 50% 50% fixed;  
+  	background: url("redwood-forest-bg-phone.jpg") repeat 50% 50%;  
     height: 1000px;
   }
   
@@ -425,8 +425,8 @@ form {
   }
   
   #rsvp {
-  	background: url("path-to-lighthouse-bg-phone.jpg") no-repeat 10% 50% fixed;
-    height: 900px;
+  	background: url("path-to-lighthouse-bg-phone.jpg") repeat 0% 50%;
+    height: 800px;
   }
   
   .button.large, .button.large {
@@ -449,7 +449,7 @@ form {
     background: url("blue-glitter-bg-sm.jpg") 50% 0 repeat;
   }
   #rsvp {
-    background: url("path-to-lighthouse-bg-sm.jpg") no-repeat 50% 50% fixed;
+    background: url("path-to-lighthouse-bg-sm.jpg") no-repeat 10% 50% fixed;
   }
 }
 @media #{$medium-only} {
