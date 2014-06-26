@@ -8,6 +8,7 @@
         %th Email
         %th Departure City
         %th Short URL key
+        %th Clicks
         %th Actions
     %tbody
       - @guests.each do |guest|
@@ -17,6 +18,7 @@
           %td= guest.email
           %td= guest.departure_city
           %td= guest.shortened_urls.first.unique_key
+          %td= guest.shortened_urls.first.use_count
           %td
             = link_to 'Show', admin_guest_path(guest)
             |

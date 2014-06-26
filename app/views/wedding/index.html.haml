@@ -61,7 +61,7 @@
           %h3.articleSubTitle.left-align
             = "Friday Evening, 9/26/14"
           %h3.subhead.left-align Don't be Tardy for the Party &hellip; 
-          %p.left-align.small-top-cell David’s parents, Gary Olem And Michele Riu Olem invite you to join them for a reception at the Redwood Grove at Samuel Taylor State Park from 4:00 PM to 7:00 PM.
+          %p.left-align.small-top-cell David’s parents, Gary Olem And Michele Riu Olem invite you to join them for a reception at the Redwood Grove at Samuel P. Taylor State Park from 4:00 PM to 7:00 PM.
         .large-1.columns.small_header
           %h3.icon
             %i{:class => "fa fa-sun-o yellow"}
@@ -97,7 +97,7 @@
       .row
         .large-12.columns
           %h3.articleSubTitle 
-            %i Dress code is Glitter Optional
+            %i Dress code: Glitter Optional
       .row
         .large-12.columns &nbsp;
 %section#directions.boxShadow{"data-speed" => "2", "data-type" => "background"}
@@ -110,9 +110,9 @@
         .large-12.columns &nbsp;
       .row
         .large-4.columns
-          %h3.subhead Samuel P Taylor Redwood Grove
+          %h3.subhead Samuel P. Taylor Redwood Grove
           %iframe.map#samtaylor{src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kLp3uxn0B4i0" }
-          %p.left-align.note The Samuel P Taylor redwood grove is a short drive from Olema on Sir Francis Drake. 
+          %p.left-align.note The Samuel P. Taylor redwood grove is a short drive from Olema on Sir Francis Drake. 
         .large-4.columns
           %h3.subhead Point Reyes Seashore Lodge
           %iframe.map#prslodge{src: "https://mapsengine.google.com/map/embed?mid=zKrGm4LOgjlw.kwIfxax1grNE" }
@@ -195,10 +195,10 @@
           = render 'partials/form'
       - else
         = render 'partials/default'
-/
-/ - if @guest && @guest.departure_city
-/   %section#animation-map{'data-origin' => @guest.departure_city}
-/     %h2.articleTitle
-/       = "Have a nice trip!"
-/   :javascript
-/     window.animationMap = new WS.AnimationMap('animation-map').init();
+
+- if @guest && @guest.departure_city
+  %section#animation-map{'data-origin' => @guest.departure_city}
+    %h2.articleTitle
+      = "Have a nice trip!"
+  :javascript
+    window.animationMap = new WS.AnimationMap('animation-map').init();
