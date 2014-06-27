@@ -5,7 +5,7 @@
       %td{:width => "50%"}
         %strong
           = "Total Coming to Wedding: "
-        = @responses.sum(&:adults)
+        = @responses.sum(&:adults) + 1
         = " adults and "
         = @responses.sum(&:children)
         = " children"
