@@ -1,6 +1,23 @@
 .admin-content
   %h1 RSVPs
   %table
+    %tr
+      %td{:width => "50%"}
+        %strong
+          = "Total Coming to Wedding: "
+        = @responses.sum(&:adults)
+        = " adults and "
+        = @responses.sum(&:children)
+        = " children"
+      %td{:width => "50%"}
+        %strong
+          = "Total Coming to Friday Reception: "
+        = Response.where(friday_reception: true).sum(&:adults)
+        = "Adults and " 
+        = Response.where(friday_reception: true).sum(&:children)
+        = " Children"
+        
+  %table
     %thead
       %tr
         %th Guest Name
@@ -33,3 +50,6 @@
   = link_to 'New Response', new_admin_response_path
   |
   = link_to 'View Guest List', admin_guests_path
+  
+  %br/
+  %br/
