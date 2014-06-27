@@ -5,14 +5,14 @@
       %td{:width => "50%"}
         %strong
           = "Total Coming to Wedding: "
-        = @responses.sum(&:adults) + 1
+        = @responses.sum(&:adults) + 3
         = " adults and "
         = @responses.sum(&:children)
         = " children"
       %td{:width => "50%"}
         %strong
           = "Total Coming to Friday Reception: "
-        = Response.where(friday_reception: true).sum(&:adults)
+        = Response.where(friday_reception: true).sum(&:adults) + 2
         = "Adults and " 
         = Response.where(friday_reception: true).sum(&:children)
         = " Children"
